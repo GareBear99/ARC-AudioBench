@@ -1,0 +1,382 @@
+[
+  {
+    "path": ".github/ISSUE_TEMPLATE/benchmark_report.yml",
+    "bytes": 285,
+    "sha256": "e0f70e03d0200e339594d78884dac1e6a0d6403ea32f0d49fa5dea0d09649150"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/plugin_benchmark.yml",
+    "bytes": 694,
+    "sha256": "df75f2c9331e3c5885e847fe1a490c8fb904c6c17300a481624f469f2c72dcfc"
+  },
+  {
+    "path": ".github/pull_request_template.md",
+    "bytes": 136,
+    "sha256": "20f40fa98f82aa8500c77b87ec1325a37555f97d4035d8d2ce66f018237be7c5"
+  },
+  {
+    "path": ".github/workflows/validate.yml",
+    "bytes": 1031,
+    "sha256": "52282bfc0011563da512a55324333a51e5f47d72d98f717cd21ac9da0c0a4d59"
+  },
+  {
+    "path": "BENCHMARKS.md",
+    "bytes": 812,
+    "sha256": "f7006cb6b4199be38e4a81ae4153ec01f4c581a2ecdb2ff3dc35f07b77eae87a"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "bytes": 416,
+    "sha256": "88f2fe0f97efe69ea3947a9a96d3af1e98115e4304f79f75cefba5218860362b"
+  },
+  {
+    "path": "CITATION.cff",
+    "bytes": 616,
+    "sha256": "76aaeda64c6590304fd23015c9581d25d62831cb8b8482323bb03d0411f58d3b"
+  },
+  {
+    "path": "CODE_OF_CONDUCT.md",
+    "bytes": 57,
+    "sha256": "4489b52378b362a4ba24ecfe258aa3e1ea4f590f58bb13c4c3ec58924d6fb570"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "bytes": 300,
+    "sha256": "ca2a5dd6c5e72aca49bdcd5efab35175396fbbd8cf587a42f71da7f4da9c2069"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 202,
+    "sha256": "638146420f47b5b9e12a656e5073272493001497207fd0176f10885fbe291dcb"
+  },
+  {
+    "path": "QUICKSTART.md",
+    "bytes": 1087,
+    "sha256": "6dfeb6313a53a0ded0aa81b65b7eee2f8bc278e4ed525115c80f6ad2f1997936"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5254,
+    "sha256": "a18aae118be7efe68bf5095dd75d861789a33d75e2a96f8a28fcf0eeb5740618"
+  },
+  {
+    "path": "SECURITY.md",
+    "bytes": 158,
+    "sha256": "f59d4b5f552da7fbc976ac32d1a3a28c21e81d7d5f82fcc9df65fe0ea4e1fb7c"
+  },
+  {
+    "path": "VERSION",
+    "bytes": 10,
+    "sha256": "627c3715dbd8d4505f82d6d11a9c6a4ddf7a5107360578e30ce6bafc1c150d56"
+  },
+  {
+    "path": "assets/social-preview.svg",
+    "bytes": 500,
+    "sha256": "dd07cb807169f5abdd9f315df72ccb1d5f1379928f57688aa0ecd9b28cd38c8e"
+  },
+  {
+    "path": "config/default_thresholds.json",
+    "bytes": 225,
+    "sha256": "b40e76ed5452cb81d4bfd8f542e1beb2be271d8601b608acf12edf29b154863f"
+  },
+  {
+    "path": "data/integration_targets.json",
+    "bytes": 944,
+    "sha256": "991e631ea602e698d12589527de2521137fefe530966bd5ae9caae34171bb8c8"
+  },
+  {
+    "path": "data/seo_keywords.json",
+    "bytes": 373,
+    "sha256": "b79a235954ab6382a4f9c819b1e09624e6b19cdbc1e4379402c68774a46574c1"
+  },
+  {
+    "path": "data/test_tones/impulse.wav",
+    "bytes": 192044,
+    "sha256": "1f7a36b714a710b350a08fd6df453d9c1a27f30e2b5f9a9ad6bea7baa8d5bca3"
+  },
+  {
+    "path": "data/test_tones/log_sweep_20_20000hz.wav",
+    "bytes": 192044,
+    "sha256": "a527eabbe6a6653c53f6da7943c8dd4790e9fcfdae2d4352a540337ac183eb62"
+  },
+  {
+    "path": "data/test_tones/silence.wav",
+    "bytes": 192044,
+    "sha256": "e294409b36a8ac1893b23336eeab5202d3e84ce4f66c7572aa1589c43d43c1ff"
+  },
+  {
+    "path": "data/test_tones/sine_10000hz.wav",
+    "bytes": 192044,
+    "sha256": "a6138a1fbb678c1599cfb997ae0b966e1f9d77d3ca901ca093deb0cf25d0af5f"
+  },
+  {
+    "path": "data/test_tones/sine_1000hz.wav",
+    "bytes": 192044,
+    "sha256": "d2d95854a78244c9208470bbb1f608f15f5822764be6df78b6753b5b8d201175"
+  },
+  {
+    "path": "data/test_tones/sine_100hz.wav",
+    "bytes": 192044,
+    "sha256": "0865babfb0d1799280ecb82854e422b04003c03c974abb5f0fe6b76ea23f0d04"
+  },
+  {
+    "path": "docs/ARC_GOVERNANCE_MODEL.md",
+    "bytes": 264,
+    "sha256": "74dc24e597cbfd50ff906daf99a3edf7b7cc3fc977d88efd857e41488b9ad643"
+  },
+  {
+    "path": "docs/COMPETITIVE_POSITIONING.md",
+    "bytes": 714,
+    "sha256": "0df45cf3cefe65574ee94a87c7547612b30dff71e7be2241e3e3bbd36d19f902"
+  },
+  {
+    "path": "docs/DAW_SMOKE_TEST_MATRIX.md",
+    "bytes": 482,
+    "sha256": "694b8f96fb3d5aec92684fd19c9885f786b86c663cda3d374cdf1660f7556439"
+  },
+  {
+    "path": "docs/DSP_TEST_DESIGN.md",
+    "bytes": 209,
+    "sha256": "d6c8196329572948123aa25661586fc2fc4457517670edfb54fd116b87499e5c"
+  },
+  {
+    "path": "docs/FREEEQ8_BENCHMARK_SUITE.md",
+    "bytes": 416,
+    "sha256": "351c5d8db85f68587eecf03b61548fa2bd89ebcb68df7927628b5136488cd52a"
+  },
+  {
+    "path": "docs/FREEEQ8_INTEGRATION.md",
+    "bytes": 376,
+    "sha256": "573c4ede473ab1a65db52e437aedada9e5113490c46e43ab08937c6adc2837fb"
+  },
+  {
+    "path": "docs/FREEVOX8_BENCHMARK_SUITE.md",
+    "bytes": 379,
+    "sha256": "165ee73edb6153e882eda62fd8896ec28e76023bb869ad3c6acca4e3a9b453d5"
+  },
+  {
+    "path": "docs/FREEVOX8_INTEGRATION.md",
+    "bytes": 342,
+    "sha256": "9baf7515aa5a28167a5498393189b4e7fe2dc222ecd94bd23a71bfe4582ece51"
+  },
+  {
+    "path": "docs/PLUGINVAL_AND_DAW_PIPELINE.md",
+    "bytes": 306,
+    "sha256": "c2c80d36dc86fd16b0b4edc3e9a494617504c002db4d9eb020f6b7685f727fd3"
+  },
+  {
+    "path": "docs/PRODUCT_POSITIONING.md",
+    "bytes": 231,
+    "sha256": "df6c0cafe5ed7accefb965e5478f865f27c39474049b93d957aa2ef7e656d4c4"
+  },
+  {
+    "path": "docs/PUBLIC_LAUNCH_PLAN.md",
+    "bytes": 763,
+    "sha256": "69bc0dba7c2bb7319a80799a60fdaf770937ecbc8c7f83456a0fe9a6f0e2ae25"
+  },
+  {
+    "path": "docs/RELEASE_CHECKLIST.md",
+    "bytes": 270,
+    "sha256": "191bec19d754a2048da9502dfda7ff07943a9d26795a80753273dd0e175d8970"
+  },
+  {
+    "path": "docs/RESEARCH_CITATION_LAYER.md",
+    "bytes": 280,
+    "sha256": "48c3229f1639162ce147555f622b5db29ab9f1b0ee387ce556d3aa1aa9fd4cd4"
+  },
+  {
+    "path": "docs/SEO_KEYWORD_MAP.md",
+    "bytes": 398,
+    "sha256": "b6b86adc453ff4a6815a13afb26f9e8d0704659bea9b7c59116579cb279f31fe"
+  },
+  {
+    "path": "docs/SOURCE_AUDIT.md",
+    "bytes": 553,
+    "sha256": "4470550d3608f6fea81a637346b70e63e0e8fb70ae4202b0fb7e85d2b90c2c1b"
+  },
+  {
+    "path": "docs/VOXEL_AUDIO_INTEGRATION.md",
+    "bytes": 260,
+    "sha256": "ea5b48a5f91a72d6c6b931f8e8c36fbd2af89d0ea52644b1ec63c96bb9dfebfb"
+  },
+  {
+    "path": "examples/freeeq8_result_example.json",
+    "bytes": 354,
+    "sha256": "91e03d9ec389d019c3234dac37a38b77f28e9cabc6f1aa1f8218780d087ef489"
+  },
+  {
+    "path": "examples/freevox8_result_example.json",
+    "bytes": 366,
+    "sha256": "c12b596654e30372e3362e8cee8194da68918e16250565e64e37abc5a5b1cd50"
+  },
+  {
+    "path": "integrations/arc_core.md",
+    "bytes": 68,
+    "sha256": "3f4f0b5cd3e28d64225905919761e9e62a86116ce6f9da8e1e9e95e34df87eda"
+  },
+  {
+    "path": "integrations/arc_neuron.md",
+    "bytes": 70,
+    "sha256": "c936e21229783fae99dfd603389f2b64fac1356b4ed4dabf2162c688122feb79"
+  },
+  {
+    "path": "integrations/arc_rar.md",
+    "bytes": 67,
+    "sha256": "7132599002a11180900e1d94b693e496816ef44f392bfed9a14fafbed8ff77b8"
+  },
+  {
+    "path": "integrations/freeeq8.md",
+    "bytes": 67,
+    "sha256": "17709e788f01a272c7cfe15dbd89da8b0877a973e422ee1fcd1b6f614cb8a901"
+  },
+  {
+    "path": "integrations/freevox8.md",
+    "bytes": 68,
+    "sha256": "6d4ee23bcac08dcefd6f68f0247ff4914ca137b74d33ac8f0c4c87d15797d7f5"
+  },
+  {
+    "path": "integrations/omnibinary.md",
+    "bytes": 70,
+    "sha256": "b92c5c07999aea79a48358cd16d0964c3a91388afce9cff5df18b29b5f1ed46a"
+  },
+  {
+    "path": "integrations/voxel_audio.md",
+    "bytes": 71,
+    "sha256": "498cf3c7a094411405982b9abb2115d9de94ec37dc6f62e896ed1a460009970a"
+  },
+  {
+    "path": "pyproject.toml",
+    "bytes": 861,
+    "sha256": "1136e67225b7ae07108ac709055f47033e125e668647b276ba03709e6b7bbdaf"
+  },
+  {
+    "path": "release_evidence/ARC_AUDIOBENCH_RELEASE_MANIFEST.json",
+    "bytes": 8324,
+    "sha256": "975ed57b206268f723974a979c7ac8421456f57b527c896c204b160baf96de3d"
+  },
+  {
+    "path": "release_evidence/source_audit_summary.json",
+    "bytes": 2429,
+    "sha256": "8ba85f7aa0c1b15b4a43ccdd7168a09350a601a8a636acae9d27fe4fd95b593e"
+  },
+  {
+    "path": "release_evidence/source_inventory.json",
+    "bytes": 422947,
+    "sha256": "db06836235a96de43d5830a229c52ae550c2c12d103bd6a5e40cca21fa1c9486"
+  },
+  {
+    "path": "reports/index.html",
+    "bytes": 1920,
+    "sha256": "ec698733b336c65d8ee492afdb8e6ea586929dba608940e9156d6525a7593d41"
+  },
+  {
+    "path": "reports/summary.md",
+    "bytes": 666,
+    "sha256": "60a5cabb386fd0a23251752f27eb9e518daf1e6a1d3218b3a20be01a2d5b5629"
+  },
+  {
+    "path": "results/batch/batch_manifest.json",
+    "bytes": 953,
+    "sha256": "e73ed292ac988ffa9754acbadcda3f1599d555965f8c0262d3bc92d5bf9ba4b5"
+  },
+  {
+    "path": "results/batch/impulse.analysis.json",
+    "bytes": 732,
+    "sha256": "6d89bce84f917857a7ae2af48fb9fb8d8de1a4f5f537e9d202e4a2ae864a864d"
+  },
+  {
+    "path": "results/batch/log_sweep_20_20000hz.analysis.json",
+    "bytes": 774,
+    "sha256": "24038b552959d7be2f7024730ad17896db1b07e79d1356ff244c1d4e099101f3"
+  },
+  {
+    "path": "results/batch/silence.analysis.json",
+    "bytes": 694,
+    "sha256": "9ae6b622b8b2bc992f9273b2021e3d4542f5724534f091095a35ff31cda38856"
+  },
+  {
+    "path": "results/batch/sine_10000hz.analysis.json",
+    "bytes": 752,
+    "sha256": "fc7f480bb162bbf044ea3ddf2e1c0e4021f87dbee7a690f072234dd92fb14693"
+  },
+  {
+    "path": "results/batch/sine_1000hz.analysis.json",
+    "bytes": 749,
+    "sha256": "c7f4e749264aa5cfb6d2b17c8bcc3ddfc3af46093e8bac596b7f727de8b43ac7"
+  },
+  {
+    "path": "results/batch/sine_100hz.analysis.json",
+    "bytes": 745,
+    "sha256": "d832c6b17091514121491cdf801af55b005fe7fd385c86941fc7074158f62d6a"
+  },
+  {
+    "path": "results/sine_1000hz.analysis.json",
+    "bytes": 749,
+    "sha256": "a2a4cf5f382caed4036115a594b5513d004fc59989e683fdbee0ba8b8b2b0f49"
+  },
+  {
+    "path": "schemas/audio_bench_result.schema.json",
+    "bytes": 1394,
+    "sha256": "6c6c724b755a2f1c113f27d2394bf658f3f211d1bd7a41156834f7fc137071e5"
+  },
+  {
+    "path": "scripts/__pycache__/analyze_wav.cpython-313.pyc",
+    "bytes": 8603,
+    "sha256": "90c3d67b270d67dfa86641960585ed86ba313a0d0f8e15cbbf11f8e8a785891a"
+  },
+  {
+    "path": "scripts/__pycache__/validate_results.cpython-313.pyc",
+    "bytes": 3582,
+    "sha256": "0a948bdda0fdf750a83ec3804b4cdd01f47b0cf8e0f87d57769eb56280b60b78"
+  },
+  {
+    "path": "scripts/analyze_wav.py",
+    "bytes": 4403,
+    "sha256": "3b9af2e4277f37362067a158af4dc328c1adfd3855ee38c240e2c177b99ca39c"
+  },
+  {
+    "path": "scripts/arc_audiobench.py",
+    "bytes": 1820,
+    "sha256": "0769f0a3cbc40f3e4f4579e113b3800373d9438f2d0de36f43893dd485cc8376"
+  },
+  {
+    "path": "scripts/batch_analyze.py",
+    "bytes": 1183,
+    "sha256": "bab4dc0b589205eb91ac70b159203c44b6e357a9253e32dd7cc394370e3133e4"
+  },
+  {
+    "path": "scripts/compare_outputs.py",
+    "bytes": 1144,
+    "sha256": "43ab16f4ebf3ebc7b4b7b384d67cfe53505185fc7f7e321b0960b43c41e46474"
+  },
+  {
+    "path": "scripts/generate_test_tones.py",
+    "bytes": 1801,
+    "sha256": "fbbd2054f692ca22ac4a1849998e0ee12e63bc894308494c86f9488c76f1d762"
+  },
+  {
+    "path": "scripts/make_evidence_pack.py",
+    "bytes": 1854,
+    "sha256": "5de836305fef05b16cfb80b5ef6ba4012ffc4a282fad5b0f35d58155a1145f12"
+  },
+  {
+    "path": "scripts/pluginval_wrapper.py",
+    "bytes": 1437,
+    "sha256": "acb32fdf8ea8680c1953895a169f1c5420b65979464907ad942ac7c75aa937f8"
+  },
+  {
+    "path": "scripts/report_results.py",
+    "bytes": 2676,
+    "sha256": "83c76da335b1c1fc190c5cce8d49a6d40a8a5429dee00f375823c924ee9dcee4"
+  },
+  {
+    "path": "scripts/validate_repo.py",
+    "bytes": 1657,
+    "sha256": "871fcc9c9e9177d45e7676a33b18aa461123349a3587242ab360abe203b46f41"
+  },
+  {
+    "path": "scripts/validate_results.py",
+    "bytes": 1980,
+    "sha256": "1d04de424ae7751308e05b5144944a69ba5c0b383ad0b4c4c4b9c8ff36e12605"
+  }
+]

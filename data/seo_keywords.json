@@ -1,0 +1,17 @@
+{
+  "primary": [
+    "audio plugin benchmark",
+    "DSP benchmark",
+    "JUCE plugin testing",
+    "VST3 validation",
+    "pluginval automation"
+  ],
+  "secondary": [
+    "FreeEQ8 benchmark",
+    "FreeVox8 spectral vocoder benchmark",
+    "Python audio analysis",
+    "reproducible audio research",
+    "audio software testing",
+    "open source audio plugin testing"
+  ]
+}

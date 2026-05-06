@@ -1,0 +1,37 @@
+{
+  "schema_version": "arc-audiobench-batch-v1",
+  "input_dir": "data/test_tones",
+  "count": 6,
+  "results": [
+    {
+      "wav": "data/test_tones/impulse.wav",
+      "result": "results/batch/impulse.analysis.json",
+      "pass": false
+    },
+    {
+      "wav": "data/test_tones/log_sweep_20_20000hz.wav",
+      "result": "results/batch/log_sweep_20_20000hz.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/silence.wav",
+      "result": "results/batch/silence.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/sine_10000hz.wav",
+      "result": "results/batch/sine_10000hz.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/sine_1000hz.wav",
+      "result": "results/batch/sine_1000hz.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/sine_100hz.wav",
+      "result": "results/batch/sine_100hz.analysis.json",
+      "pass": true
+    }
+  ]
+}

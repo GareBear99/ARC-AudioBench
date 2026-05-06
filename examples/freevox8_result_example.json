@@ -1,0 +1,13 @@
+{
+  "schema_version": "arc-audiobench-result-v1",
+  "tool": "ARC-AudioBench",
+  "analysis_type": "freevox8_spectral_placeholder",
+  "source_file": "renders/freevox8_vocoder_test.wav",
+  "sha256": "placeholder",
+  "sample_rate": 48000,
+  "duration_seconds": 2.0,
+  "peak": 0.75,
+  "rms": 0.25,
+  "pass": true,
+  "notes": "Replace with real spectral/vocoder render."
+}

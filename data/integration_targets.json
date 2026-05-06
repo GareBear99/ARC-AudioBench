@@ -1,0 +1,40 @@
+[
+  {
+    "name": "FreeEQ8",
+    "repo": "https://github.com/GareBear99/FreeEQ8",
+    "role": "parametric EQ benchmark target",
+    "keywords": [
+      "free eq plugin",
+      "JUCE EQ",
+      "audio plugin benchmark"
+    ]
+  },
+  {
+    "name": "FreeVox8",
+    "repo": "https://github.com/GareBear99/FreeVox8",
+    "role": "spectral vocoder benchmark target",
+    "keywords": [
+      "spectral vocoder",
+      "vocoder benchmark",
+      "ghost resynthesis"
+    ]
+  },
+  {
+    "name": "Voxel Audio",
+    "repo": "https://github.com/GareBear99/Voxel_Audio",
+    "role": "visualizer/export integrity target",
+    "keywords": [
+      "audio visualizer",
+      "music export validation"
+    ]
+  },
+  {
+    "name": "ARC-Neuron LLMBuilder",
+    "repo": "https://github.com/GareBear99/ARC-Neuron-LLMBuilder",
+    "role": "governed evidence/promotion language source",
+    "keywords": [
+      "local AI benchmark",
+      "evidence-backed AI"
+    ]
+  }
+]

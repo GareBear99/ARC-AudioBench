@@ -1,0 +1,23 @@
+[project]
+name = "arc-audiobench"
+version = "1.0.0rc1"
+description = "Local-first benchmark suite for audio plugins, DSP tools, JUCE projects, spectral processors, and AI-assisted music software."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Gary Doman / GareBear99 / TizWildin"}]
+keywords = ["audio", "dsp", "juce", "vst3", "pluginval", "audio-plugin", "benchmark", "python-audio", "reproducible-research"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Multimedia :: Sound/Audio :: Analysis",
+  "Topic :: Software Development :: Testing",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+arc-audiobench = "scripts.arc_audiobench:main"
+
+[tool.arc-audiobench]
+schema_version = "arc-audiobench-result-v1"

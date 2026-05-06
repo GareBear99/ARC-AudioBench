@@ -1,0 +1,9 @@
+{
+  "schema_version": "arc-audiobench-thresholds-v1",
+  "max_peak": 1.0,
+  "max_abs_dc_offset": 0.01,
+  "max_clipping_samples": 0,
+  "min_duration_seconds": 0.001,
+  "warn_rms_below": 0.000001,
+  "warn_crest_above": 1000.0
+}

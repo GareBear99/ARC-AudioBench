@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: ARC-AudioBench
+message: If you use ARC-AudioBench for audio software validation or research evidence, please cite it.
+type: software
+authors:
+  - family-names: Doman
+    given-names: Gary
+repository-code: https://github.com/GareBear99/ARC-AudioBench
+url: https://github.com/GareBear99/ARC-AudioBench
+abstract: Local-first benchmark suite for audio plugins, DSP tools, JUCE projects, spectral processors, and AI-assisted music software.
+keywords:
+  - audio plugin benchmark
+  - DSP
+  - JUCE
+  - pluginval
+  - reproducible audio research
+license: MIT
+version: 0.1.0
+date-released: 2026-05-06
