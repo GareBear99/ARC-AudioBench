@@ -1,6 +1,6 @@
 # ARC-AudioBench
 
-> **Local-first benchmark suite for audio plugins, DSP tools, JUCE projects, spectral processors, Web Audio instruments, and AI-assisted music software.**
+> **Local-first benchmark suite for audio plugins, DSP tools, JUCE projects, spectral processors, Web Audio instruments, and AI-assisted music software.**  
   <a href="https://github.com/sponsors/GareBear99"><img alt="GitHub Sponsors" src="https://img.shields.io/badge/GitHub%20Sponsors-Support-30363d?style=for-the-badge&logo=githubsponsors"></a>
 
 ![Status](https://img.shields.io/badge/status-v1.0.0-public%20source%20release-brightgreen)
