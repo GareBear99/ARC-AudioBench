@@ -2,7 +2,7 @@
 
 > **Local-first benchmark suite for audio plugins, DSP tools, JUCE projects, spectral processors, Web Audio instruments, and AI-assisted music software.**
 
-![Status](https://img.shields.io/badge/status-v1.0.0--rc1-blue)
+![Status](https://img.shields.io/badge/status-v1.0.0-public%20source%20release-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.9%2B-3776AB)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Audio DSP](https://img.shields.io/badge/audio-DSP%20benchmark-ff69b4)
@@ -94,19 +94,28 @@ ARC-AudioBench/
 └─ .github/
 ```
 
-## Ecosystem anchors
+## Ecosystem anchors and source references
 
-| Project | Role in ARC-AudioBench |
-|---|---|
-| [FreeEQ8](https://github.com/GareBear99/FreeEQ8) | flagship EQ validation target |
-| [FreeVox8](https://github.com/GareBear99/FreeVox8) | spectral vocoder / ghost resynthesis benchmark target |
-| [Voxel Audio](https://github.com/GareBear99/Voxel_Audio) | visual/export/audio-render benchmark target |
-| [ARC-Neuron LLMBuilder](https://github.com/GareBear99/ARC-Neuron-LLMBuilder) | governance/evidence/promotion model reference |
-| [ARC-Core](https://github.com/GareBear99/ARC-Core) | receipt, validation, release authority reference |
-| [Arc-RAR](https://github.com/GareBear99/Arc-RAR) | archival/evidence bundle direction |
-| [OmniBinary Runtime](https://github.com/GareBear99/omnibinary-runtime) | binary truth / replay ledger direction |
-| [Awesome Audio Plugins & Dev](https://github.com/GareBear99/awesome-audio-plugins-dev) | Start Here list and public discovery route |
-| [Awesome Python Audio Science](https://github.com/GareBear99/awesome-python-audio-science) | research/academic SEO bridge |
+ARC-AudioBench is a standalone benchmark product, but it was intentionally designed from the public **GareBear99 / TizWildin** repo ecosystem. These are the canonical repos referenced by the benchmark suite, documentation, SEO map, release-evidence model, and future integration path.
+
+| Repository | Role in ARC-AudioBench | Category |
+|---|---|---|
+| [FreeEQ8](https://github.com/GareBear99/FreeEQ8) | Primary open-source JUCE/C++ parametric EQ benchmark target | `product-anchor` |
+| [FreeVox8](https://github.com/GareBear99/FreeVox8) | Spectral vocoder / ghost-resynthesis benchmark target | `product-anchor` |
+| [Voxel Audio](https://github.com/GareBear99/Voxel_Audio) | Visualizer/export integrity and browser audio-output benchmark target | `product-anchor` |
+| [ARC-Neuron LLMBuilder](https://github.com/GareBear99/ARC-Neuron-LLMBuilder) | Governed local AI evidence, promotion, benchmark language, and release-gate reference | `governance-reference` |
+| [ARC-Core](https://github.com/GareBear99/ARC-Core) | Authority, receipts, validation, release-gate, and evidence-control reference | `governance-reference` |
+| [Arc-RAR](https://github.com/GareBear99/Arc-RAR) | Archival bundle, rollback, evidence-pack, and replay package reference | `governance-reference` |
+| [OmniBinary Runtime](https://github.com/GareBear99/omnibinary-runtime) | Binary truth / replay ledger / restore path reference | `governance-reference` |
+| [Awesome Audio Plugins & Dev](https://github.com/GareBear99/awesome-audio-plugins-dev) | Start Here technical discovery list for audio plugins, DSP, JUCE, sample packs, and developer resources | `seo-discovery` |
+| [Awesome Audio Lists](https://github.com/GareBear99/awesome-audio-lists) | Root hub for audio lists, submission surfaces, plugin directories, sample-pack directories, and ecosystem routing | `seo-discovery` |
+| [Awesome Music Platforms](https://github.com/GareBear99/awesome-music-platforms) | Independent artist platform map for distribution, beat selling, sample packs, sync, promotion, and analytics | `seo-discovery` |
+| [Awesome Python Audio Science](https://github.com/GareBear99/awesome-python-audio-science) | Academic/research-facing Python audio science, MIR, ML-audio, reproducible research, and citation bridge | `research-seo` |
+| [TizWildinEntertainmentHUB](https://github.com/GareBear99/TizWildinEntertainmentHUB) | Public .io/HUB router for plugins, lists, deconstructed loops, sample packs, visualizers, and release surfaces | `public-router` |
+| [TizWildin Release Vault](https://github.com/GareBear99/TizWildin-Release-Vault) | Release surface for deconstructed loops, packs, music drops, and creator-resource routing | `public-router` |
+| [Instrudio](https://github.com/GareBear99/Instrudio) | SSOT Web Audio virtual-instrument runtime and physical-modeling research anchor | `research-product-anchor` |
+
+See [`docs/ECOSYSTEM_REPO_REFERENCES.md`](docs/ECOSYSTEM_REPO_REFERENCES.md) and [`data/integration_targets.json`](data/integration_targets.json) for the machine-readable version of this map.
 
 ## High-value search terms
 
@@ -127,7 +136,7 @@ FreeVox8 spectral vocoder benchmark
 
 ## Honest production status
 
-This package is a **v1.0.0 release candidate source package**. The local benchmark, report, validation, and evidence scripts run without external services. Plugin-specific certification still requires the actual plugin binaries, pluginval output, and DAW smoke tests for each target plugin.
+This package is a **v1.0.0 public source release framework**. The local benchmark, report, validation, and evidence scripts run without external services. Plugin-specific certification still requires the actual plugin binaries, pluginval output, and DAW smoke tests for each target plugin.
 
 ## License
 

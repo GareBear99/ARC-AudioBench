@@ -392,5 +392,78 @@
     "python3 scripts/validate_results.py results/sine_1000hz.analysis.json",
     "python3 scripts/report_results.py results --out reports/index.html --markdown reports/summary.md",
     "python3 scripts/validate_repo.py"
-  ]
+  ],
+  "referenced_garebear99_repositories": [
+    {
+      "name": "FreeEQ8",
+      "url": "https://github.com/GareBear99/FreeEQ8",
+      "category": "product-anchor"
+    },
+    {
+      "name": "FreeVox8",
+      "url": "https://github.com/GareBear99/FreeVox8",
+      "category": "product-anchor"
+    },
+    {
+      "name": "Voxel Audio",
+      "url": "https://github.com/GareBear99/Voxel_Audio",
+      "category": "product-anchor"
+    },
+    {
+      "name": "ARC-Neuron LLMBuilder",
+      "url": "https://github.com/GareBear99/ARC-Neuron-LLMBuilder",
+      "category": "governance-reference"
+    },
+    {
+      "name": "ARC-Core",
+      "url": "https://github.com/GareBear99/ARC-Core",
+      "category": "governance-reference"
+    },
+    {
+      "name": "Arc-RAR",
+      "url": "https://github.com/GareBear99/Arc-RAR",
+      "category": "governance-reference"
+    },
+    {
+      "name": "OmniBinary Runtime",
+      "url": "https://github.com/GareBear99/omnibinary-runtime",
+      "category": "governance-reference"
+    },
+    {
+      "name": "Awesome Audio Plugins & Dev",
+      "url": "https://github.com/GareBear99/awesome-audio-plugins-dev",
+      "category": "seo-discovery"
+    },
+    {
+      "name": "Awesome Audio Lists",
+      "url": "https://github.com/GareBear99/awesome-audio-lists",
+      "category": "seo-discovery"
+    },
+    {
+      "name": "Awesome Music Platforms",
+      "url": "https://github.com/GareBear99/awesome-music-platforms",
+      "category": "seo-discovery"
+    },
+    {
+      "name": "Awesome Python Audio Science",
+      "url": "https://github.com/GareBear99/awesome-python-audio-science",
+      "category": "research-seo"
+    },
+    {
+      "name": "TizWildinEntertainmentHUB",
+      "url": "https://github.com/GareBear99/TizWildinEntertainmentHUB",
+      "category": "public-router"
+    },
+    {
+      "name": "TizWildin Release Vault",
+      "url": "https://github.com/GareBear99/TizWildin-Release-Vault",
+      "category": "public-router"
+    },
+    {
+      "name": "Instrudio",
+      "url": "https://github.com/GareBear99/Instrudio",
+      "category": "research-product-anchor"
+    }
+  ],
+  "ecosystem_reference_doc": "docs/ECOSYSTEM_REPO_REFERENCES.md"
 }

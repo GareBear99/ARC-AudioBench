@@ -2,5 +2,22 @@
   "project": "ARC-AudioBench",
   "version": "1.0.0-rc1",
   "file_count": 76,
-  "status": "source release candidate generated"
+  "status": "source release candidate generated",
+  "referenced_repositories_count": 14,
+  "referenced_repositories": [
+    "FreeEQ8",
+    "FreeVox8",
+    "Voxel Audio",
+    "ARC-Neuron LLMBuilder",
+    "ARC-Core",
+    "Arc-RAR",
+    "OmniBinary Runtime",
+    "Awesome Audio Plugins & Dev",
+    "Awesome Audio Lists",
+    "Awesome Music Platforms",
+    "Awesome Python Audio Science",
+    "TizWildinEntertainmentHUB",
+    "TizWildin Release Vault",
+    "Instrudio"
+  ]
 }
