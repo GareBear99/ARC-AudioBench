@@ -2,39 +2,155 @@
   {
     "name": "FreeEQ8",
     "repo": "https://github.com/GareBear99/FreeEQ8",
-    "role": "parametric EQ benchmark target",
+    "role": "Primary open-source JUCE/C++ parametric EQ benchmark target",
+    "category": "product-anchor",
     "keywords": [
-      "free eq plugin",
       "JUCE EQ",
-      "audio plugin benchmark"
+      "audio plugin benchmark",
+      "FreeEQ8 benchmark"
     ]
   },
   {
     "name": "FreeVox8",
     "repo": "https://github.com/GareBear99/FreeVox8",
-    "role": "spectral vocoder benchmark target",
+    "role": "Spectral vocoder / ghost-resynthesis benchmark target",
+    "category": "product-anchor",
     "keywords": [
       "spectral vocoder",
-      "vocoder benchmark",
+      "FreeVox8 benchmark",
       "ghost resynthesis"
     ]
   },
   {
     "name": "Voxel Audio",
     "repo": "https://github.com/GareBear99/Voxel_Audio",
-    "role": "visualizer/export integrity target",
+    "role": "Visualizer/export integrity and browser audio-output benchmark target",
+    "category": "product-anchor",
     "keywords": [
       "audio visualizer",
-      "music export validation"
+      "music export validation",
+      "browser audio"
     ]
   },
   {
     "name": "ARC-Neuron LLMBuilder",
     "repo": "https://github.com/GareBear99/ARC-Neuron-LLMBuilder",
-    "role": "governed evidence/promotion language source",
+    "role": "Governed local AI evidence, promotion, benchmark language, and release-gate reference",
+    "category": "governance-reference",
     "keywords": [
       "local AI benchmark",
-      "evidence-backed AI"
+      "evidence-backed AI",
+      "LLM builder"
+    ]
+  },
+  {
+    "name": "ARC-Core",
+    "repo": "https://github.com/GareBear99/ARC-Core",
+    "role": "Authority, receipts, validation, release-gate, and evidence-control reference",
+    "category": "governance-reference",
+    "keywords": [
+      "ARC core",
+      "receipts",
+      "validation"
+    ]
+  },
+  {
+    "name": "Arc-RAR",
+    "repo": "https://github.com/GareBear99/Arc-RAR",
+    "role": "Archival bundle, rollback, evidence-pack, and replay package reference",
+    "category": "governance-reference",
+    "keywords": [
+      "archive",
+      "evidence bundle",
+      "rollback"
+    ]
+  },
+  {
+    "name": "OmniBinary Runtime",
+    "repo": "https://github.com/GareBear99/omnibinary-runtime",
+    "role": "Binary truth / replay ledger / restore path reference",
+    "category": "governance-reference",
+    "keywords": [
+      "binary ledger",
+      "replay",
+      "restore"
+    ]
+  },
+  {
+    "name": "Awesome Audio Plugins & Dev",
+    "repo": "https://github.com/GareBear99/awesome-audio-plugins-dev",
+    "role": "Start Here technical discovery list for audio plugins, DSP, JUCE, sample packs, and developer resources",
+    "category": "seo-discovery",
+    "keywords": [
+      "audio plugins",
+      "JUCE resources",
+      "DSP tools"
+    ]
+  },
+  {
+    "name": "Awesome Audio Lists",
+    "repo": "https://github.com/GareBear99/awesome-audio-lists",
+    "role": "Root hub for audio lists, submission surfaces, plugin directories, sample-pack directories, and ecosystem routing",
+    "category": "seo-discovery",
+    "keywords": [
+      "audio lists",
+      "submission targets",
+      "plugin directories"
+    ]
+  },
+  {
+    "name": "Awesome Music Platforms",
+    "repo": "https://github.com/GareBear99/awesome-music-platforms",
+    "role": "Independent artist platform map for distribution, beat selling, sample packs, sync, promotion, and analytics",
+    "category": "seo-discovery",
+    "keywords": [
+      "music platforms",
+      "distribution",
+      "sync licensing"
+    ]
+  },
+  {
+    "name": "Awesome Python Audio Science",
+    "repo": "https://github.com/GareBear99/awesome-python-audio-science",
+    "role": "Academic/research-facing Python audio science, MIR, ML-audio, reproducible research, and citation bridge",
+    "category": "research-seo",
+    "keywords": [
+      "Python audio science",
+      "MIR",
+      "reproducible audio research"
+    ]
+  },
+  {
+    "name": "TizWildinEntertainmentHUB",
+    "repo": "https://github.com/GareBear99/TizWildinEntertainmentHUB",
+    "role": "Public .io/HUB router for plugins, lists, deconstructed loops, sample packs, visualizers, and release surfaces",
+    "category": "public-router",
+    "keywords": [
+      "audio hub",
+      "creator router",
+      "deconstructed loops"
+    ]
+  },
+  {
+    "name": "TizWildin Release Vault",
+    "repo": "https://github.com/GareBear99/TizWildin-Release-Vault",
+    "role": "Release surface for deconstructed loops, packs, music drops, and creator-resource routing",
+    "category": "public-router",
+    "keywords": [
+      "release vault",
+      "sample packs",
+      "loops"
+    ]
+  },
+  {
+    "name": "Instrudio",
+    "repo": "https://github.com/GareBear99/Instrudio",
+    "role": "SSOT Web Audio virtual-instrument runtime and physical-modeling research anchor",
+    "category": "research-product-anchor",
+    "keywords": [
+      "Web Audio",
+      "virtual instrument",
+      "SSOT instrument runtime"
     ]
   }
 ]
