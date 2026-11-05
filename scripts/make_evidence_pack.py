@@ -18,7 +18,7 @@ def main():
         'schema_version':'arc-audiobench-release-manifest-v1',
         'project':'ARC-AudioBench',
         'version':(ROOT/'VERSION').read_text().strip() if (ROOT/'VERSION').exists() else 'unknown',
-        'created_utc':datetime.datetime.utcnow().replace(microsecond=0).isoformat()+'Z',
+        'created_utc':datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z'),
         'file_count':len(files),
         'files':files,
         'validation_commands':[

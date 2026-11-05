@@ -1,0 +1,107 @@
+{
+  "schema_version": "arc-audiobench-alias-v1",
+  "tool": "ARC-AudioBench",
+  "tool_version": "1.0.0-rc1",
+  "analysis_type": "alias_test",
+  "label": "sawtooth_naive_997hz",
+  "source_file": "data/test_tones/sawtooth_naive_997hz.wav",
+  "fundamental_hz": 997.0,
+  "sample_rate": 48000,
+  "channels": 1,
+  "fft_size": 16384,
+  "window_seconds": 0.341333,
+  "skip_seconds": 0.5,
+  "noise_floor_dbfs": -80.0,
+  "fundamental_dbfs": -10.484,
+  "harmonic_peak_count": 24,
+  "alias_peak_count": 2135,
+  "alias_to_signal_ratio_db": -15.849,
+  "worst_alias_dbfs": -38.252,
+  "worst_alias_hz": 22078.125,
+  "worst_alias_threshold_dbfs": -60.0,
+  "asr_threshold_db": -40.0,
+  "aliases": [
+    {
+      "frequency_hz": 22078.125,
+      "level_dbfs": -38.252
+    },
+    {
+      "frequency_hz": 23074.219,
+      "level_dbfs": -38.304
+    },
+    {
+      "frequency_hz": 19086.914,
+      "level_dbfs": -39.196
+    },
+    {
+      "frequency_hz": 21082.031,
+      "level_dbfs": -39.268
+    },
+    {
+      "frequency_hz": 20083.008,
+      "level_dbfs": -39.536
+    },
+    {
+      "frequency_hz": 18090.82,
+      "level_dbfs": -39.925
+    },
+    {
+      "frequency_hz": 16095.703,
+      "level_dbfs": -40.104
+    },
+    {
+      "frequency_hz": 15099.609,
+      "level_dbfs": -40.555
+    },
+    {
+      "frequency_hz": 17091.797,
+      "level_dbfs": -40.729
+    },
+    {
+      "frequency_hz": 13104.492,
+      "level_dbfs": -40.994
+    },
+    {
+      "frequency_hz": 12108.398,
+      "level_dbfs": -41.171
+    },
+    {
+      "frequency_hz": 9117.188,
+      "level_dbfs": -41.786
+    },
+    {
+      "frequency_hz": 10113.281,
+      "level_dbfs": -41.878
+    },
+    {
+      "frequency_hz": 14100.586,
+      "level_dbfs": -41.903
+    },
+    {
+      "frequency_hz": 6125.977,
+      "level_dbfs": -42.407
+    },
+    {
+      "frequency_hz": 11112.305,
+      "level_dbfs": -42.427
+    },
+    {
+      "frequency_hz": 8121.094,
+      "level_dbfs": -42.767
+    },
+    {
+      "frequency_hz": 7122.07,
+      "level_dbfs": -42.769
+    },
+    {
+      "frequency_hz": 3134.766,
+      "level_dbfs": -43.042
+    },
+    {
+      "frequency_hz": 5129.883,
+      "level_dbfs": -43.12
+    }
+  ],
+  "pass": false,
+  "created_utc": "2026-11-05T15:25:52Z"
+}

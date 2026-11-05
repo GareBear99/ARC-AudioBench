@@ -1,0 +1,55 @@
+name: Plugin benchmark request
+description: Request a benchmark run for an audio plugin against ARC-AudioBench
+title: "[benchmark] "
+labels: [benchmark]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin name and version
+      description: e.g. FreeEQ8 v2.3.1, FreeVox8 v0.5.0
+      placeholder: Plugin name + version
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Plugin repository
+      description: GitHub URL of the plugin source
+      placeholder: https://github.com/GareBear99/...
+    validations:
+      required: true
+  - type: input
+    id: binary
+    attributes:
+      label: Plugin binary (VST3 / AU / CLAP)
+      description: Path or download link for the built plugin binary to validate
+      placeholder: e.g. FreeEQ8.vst3, or a release download URL
+    validations:
+      required: false
+  - type: dropdown
+    id: tests
+    attributes:
+      label: Tests requested
+      multiple: true
+      options:
+        - Alias test (Therum section 7)
+        - Filter response test (cramping)
+        - CPU benchmarks + instance scaling
+        - Latency
+        - Real-time safety (allocations, SPSC, denormals)
+        - pluginval strictness 10
+        - DAW smoke test (which DAW?)
+        - Preset / state round-trip
+        - STOI intelligibility (vocoders)
+        - Freeze-blur test (vocoders)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Sample rate / buffer size / host to run against, or anything else the bench should know
+      placeholder: e.g. 48 kHz, 128-sample buffer, Ableton Live 12 Lite on the 2018 Intel Mac mini
+    validations:
+      required: false

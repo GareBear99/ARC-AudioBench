@@ -22,7 +22,7 @@ def html_report(rows):
         status='PASS' if d.get('pass') else 'CHECK'
         trs.append(f"<tr><td>{html.escape(d.get('label', p.stem))}</td><td>{status}</td><td>{d.get('sample_rate')}</td><td>{d.get('duration_seconds')}</td><td>{d.get('peak')}</td><td>{d.get('rms')}</td><td>{d.get('dc_offset')}</td><td>{d.get('clipping_samples')}</td><td><code>{html.escape(str(p))}</code></td></tr>")
     body=''.join(trs)
-    created=datetime.datetime.utcnow().isoformat()+'Z'
+    created=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00','Z')
     return f"""<!doctype html><html><head><meta charset='utf-8'><title>ARC-AudioBench Report</title><style>body{{font-family:system-ui;background:#0b1020;color:#e8ecff;padding:32px}}table{{border-collapse:collapse;width:100%}}td,th{{border:1px solid #2b345f;padding:8px}}th{{background:#151d3c}}code{{color:#8ee6ff}}</style></head><body><h1>ARC-AudioBench Report</h1><p>Generated {created}</p><table><thead><tr><th>Label</th><th>Status</th><th>SR</th><th>Duration</th><th>Peak</th><th>RMS</th><th>DC</th><th>Clip</th><th>File</th></tr></thead><tbody>{body}</tbody></table></body></html>"""
 
 def md_report(rows):

@@ -6,7 +6,7 @@
   "label": "silence",
   "source_file": "data/test_tones/silence.wav",
   "sha256": "e294409b36a8ac1893b23336eeab5202d3e84ce4f66c7572aa1589c43d43c1ff",
-  "created_utc": "2026-05-06T11:21:13Z",
+  "created_utc": "2026-11-05T15:25:51Z",
   "sample_rate": 48000,
   "channels": 1,
   "sample_width_bytes": 2,

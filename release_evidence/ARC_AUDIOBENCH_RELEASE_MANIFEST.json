@@ -2,38 +2,33 @@
   "schema_version": "arc-audiobench-release-manifest-v1",
   "project": "ARC-AudioBench",
   "version": "1.0.0-rc1",
-  "created_utc": "2026-05-06T11:24:26Z",
-  "file_count": 76,
+  "created_utc": "2026-11-05T15:25:52Z",
+  "file_count": 83,
   "files": [
     {
-      "path": ".github/ISSUE_TEMPLATE/benchmark_report.yml",
-      "bytes": 285,
-      "sha256": "e0f70e03d0200e339594d78884dac1e6a0d6403ea32f0d49fa5dea0d09649150"
-    },
-    {
       "path": ".github/ISSUE_TEMPLATE/plugin_benchmark.yml",
-      "bytes": 694,
-      "sha256": "df75f2c9331e3c5885e847fe1a490c8fb904c6c17300a481624f469f2c72dcfc"
-    },
-    {
-      "path": ".github/pull_request_template.md",
-      "bytes": 136,
-      "sha256": "20f40fa98f82aa8500c77b87ec1325a37555f97d4035d8d2ce66f018237be7c5"
+      "bytes": 1728,
+      "sha256": "8b049086929d99269ee5884e73218b751c972197481f5a0bf1a68a97473b0600"
     },
     {
       "path": ".github/workflows/validate.yml",
-      "bytes": 1031,
-      "sha256": "52282bfc0011563da512a55324333a51e5f47d72d98f717cd21ac9da0c0a4d59"
+      "bytes": 1484,
+      "sha256": "8db198e51c0bcf2da4166d9346597f880e763b85b83b061da6df510a9f1228c1"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 42,
+      "sha256": "d6cb6e383355d080f825b02320b2ac120da14915f2d12ce8f35bc168e741fcc4"
     },
     {
       "path": "BENCHMARKS.md",
-      "bytes": 812,
-      "sha256": "f7006cb6b4199be38e4a81ae4153ec01f4c581a2ecdb2ff3dc35f07b77eae87a"
+      "bytes": 2145,
+      "sha256": "f423f2f13ce1aff54890474bd30c9b51adfdea67862f7970147b48da857a440a"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 416,
-      "sha256": "88f2fe0f97efe69ea3947a9a96d3af1e98115e4304f79f75cefba5218860362b"
+      "bytes": 845,
+      "sha256": "e238b27dc3c5e21f6d8977bb0824956ae352bde89d93d80a4df23a5ef5b1e78d"
     },
     {
       "path": "CITATION.cff",
@@ -57,13 +52,13 @@
     },
     {
       "path": "QUICKSTART.md",
-      "bytes": 1087,
-      "sha256": "6dfeb6313a53a0ded0aa81b65b7eee2f8bc278e4ed525115c80f6ad2f1997936"
+      "bytes": 1711,
+      "sha256": "d2deb26c4d82106e90324ce1b85bb7ff7bdb8a9a5e0320788b87a1f775057f7b"
     },
     {
       "path": "README.md",
-      "bytes": 5254,
-      "sha256": "a18aae118be7efe68bf5095dd75d861789a33d75e2a96f8a28fcf0eeb5740618"
+      "bytes": 7505,
+      "sha256": "7676f92a05a84c95e610c748091ef8e89319f3a4adb688ec20b35d145819bf68"
     },
     {
       "path": "SECURITY.md",
@@ -87,8 +82,8 @@
     },
     {
       "path": "data/integration_targets.json",
-      "bytes": 944,
-      "sha256": "991e631ea602e698d12589527de2521137fefe530966bd5ae9caae34171bb8c8"
+      "bytes": 4676,
+      "sha256": "7286b0c6b44a85953bbb886a830863316a199dea4eaf4c0db6710d1291b80cc9"
     },
     {
       "path": "data/seo_keywords.json",
@@ -104,6 +99,16 @@
       "path": "data/test_tones/log_sweep_20_20000hz.wav",
       "bytes": 192044,
       "sha256": "a527eabbe6a6653c53f6da7943c8dd4790e9fcfdae2d4352a540337ac183eb62"
+    },
+    {
+      "path": "data/test_tones/sawtooth_bandlimited_997hz.wav",
+      "bytes": 192044,
+      "sha256": "7a568335d753d3bcc185fbfb2f9d48b4232de46ae601e8a7dff1c79981e06ec9"
+    },
+    {
+      "path": "data/test_tones/sawtooth_naive_997hz.wav",
+      "bytes": 192044,
+      "sha256": "d285529d74aeb64307cf270ecd50096799c5e944ac9659153a0d60d45b240200"
     },
     {
       "path": "data/test_tones/silence.wav",
@@ -142,8 +147,13 @@
     },
     {
       "path": "docs/DSP_TEST_DESIGN.md",
-      "bytes": 209,
-      "sha256": "d6c8196329572948123aa25661586fc2fc4457517670edfb54fd116b87499e5c"
+      "bytes": 3868,
+      "sha256": "bef0bdc90c6e442f7d0355d5f46270e824624215bc725fe58ff7d13ce89f97e3"
+    },
+    {
+      "path": "docs/ECOSYSTEM_REPO_REFERENCES.md",
+      "bytes": 4132,
+      "sha256": "91f8b2039d7d3a8710d1a86a120b85faf7bbb820ea5f5166d0abc93250e552d7"
     },
     {
       "path": "docs/FREEEQ8_BENCHMARK_SUITE.md",
@@ -164,6 +174,11 @@
       "path": "docs/FREEVOX8_INTEGRATION.md",
       "bytes": 342,
       "sha256": "9baf7515aa5a28167a5498393189b4e7fe2dc222ecd94bd23a71bfe4582ece51"
+    },
+    {
+      "path": "docs/MEASUREMENT_PLAN.md",
+      "bytes": 8938,
+      "sha256": "de27bda4b3ec21b67458d91a46bcadbee153c42965de96f478c1f04393331ded"
     },
     {
       "path": "docs/PLUGINVAL_AND_DAW_PIPELINE.md",
@@ -257,63 +272,83 @@
     },
     {
       "path": "release_evidence/ARC_AUDIOBENCH_RELEASE_MANIFEST.json",
-      "bytes": 8324,
-      "sha256": "975ed57b206268f723974a979c7ac8421456f57b527c896c204b160baf96de3d"
+      "bytes": 12614,
+      "sha256": "36b6ab6606a430bc5269144419d7031ff95757ebcbafff1f7e16c6eb7f05ea6a"
     },
     {
       "path": "release_evidence/source_audit_summary.json",
-      "bytes": 2429,
-      "sha256": "8ba85f7aa0c1b15b4a43ccdd7168a09350a601a8a636acae9d27fe4fd95b593e"
+      "bytes": 129,
+      "sha256": "10b07e08c84d0b6eb532a5b74ea9258ac0ec0b9cfa0333db34beb192285e1a8c"
     },
     {
       "path": "release_evidence/source_inventory.json",
-      "bytes": 422947,
-      "sha256": "db06836235a96de43d5830a229c52ae550c2c12d103bd6a5e40cca21fa1c9486"
+      "bytes": 11273,
+      "sha256": "eb604c7fc1b161c6012962b299f6180e44f4de981a177ad33af80e433c0871b5"
     },
     {
       "path": "reports/index.html",
-      "bytes": 1920,
-      "sha256": "ec698733b336c65d8ee492afdb8e6ea586929dba608940e9156d6525a7593d41"
+      "bytes": 2361,
+      "sha256": "10ac9365debfa873a6ee3193c56a9891aa35550e448a56602e7c549c02350ed4"
     },
     {
       "path": "reports/summary.md",
-      "bytes": 666,
-      "sha256": "60a5cabb386fd0a23251752f27eb9e518daf1e6a1d3218b3a20be01a2d5b5629"
+      "bytes": 851,
+      "sha256": "2d12368f904a8d1d1735ce020bd314083e59b36c7194d4e7c44013cfc7cea53c"
+    },
+    {
+      "path": "results/alias/sawtooth_bandlimited_997hz.alias.json",
+      "bytes": 737,
+      "sha256": "62a8bd5b76f03e3a964bdc45cd45f3058887bd37dffdff53a1c708f00af32ab6"
+    },
+    {
+      "path": "results/alias/sawtooth_naive_997hz.alias.json",
+      "bytes": 2213,
+      "sha256": "46b3a12b4c2d2b115edd6b7fa181ccf46026c9db4eaccbac5a6ec5f5c6a24b4e"
     },
     {
       "path": "results/batch/batch_manifest.json",
-      "bytes": 953,
-      "sha256": "e73ed292ac988ffa9754acbadcda3f1599d555965f8c0262d3bc92d5bf9ba4b5"
+      "bytes": 1279,
+      "sha256": "d396955b02f36e5cdef7b61bcc8641591f1b330a83d3a61b337f12a3a5c364fa"
     },
     {
       "path": "results/batch/impulse.analysis.json",
       "bytes": 732,
-      "sha256": "6d89bce84f917857a7ae2af48fb9fb8d8de1a4f5f537e9d202e4a2ae864a864d"
+      "sha256": "09f0733c95dbf9533a097d0830973ff387fbfe958091cffb505836049bccbf69"
     },
     {
       "path": "results/batch/log_sweep_20_20000hz.analysis.json",
       "bytes": 774,
-      "sha256": "24038b552959d7be2f7024730ad17896db1b07e79d1356ff244c1d4e099101f3"
+      "sha256": "294508877a1f3c8fd4ef24da33ae0ac07856a041b95076cc7f86323498021a4b"
+    },
+    {
+      "path": "results/batch/sawtooth_bandlimited_997hz.analysis.json",
+      "bytes": 776,
+      "sha256": "8a3d2c579d25e613d90a65f094cc2dd8ef3f82ef5ab0596b48715070fb38e964"
+    },
+    {
+      "path": "results/batch/sawtooth_naive_997hz.analysis.json",
+      "bytes": 771,
+      "sha256": "cf8cc4cf49e9a94ced5a6b0bfa9a7cde49288ee05d22cf624c21deabe69961ca"
     },
     {
       "path": "results/batch/silence.analysis.json",
       "bytes": 694,
-      "sha256": "9ae6b622b8b2bc992f9273b2021e3d4542f5724534f091095a35ff31cda38856"
+      "sha256": "19bed5a4108b694c2b1fd41093d5d0817902e74c7cebd8cda1094dfba9e606f7"
     },
     {
       "path": "results/batch/sine_10000hz.analysis.json",
       "bytes": 752,
-      "sha256": "fc7f480bb162bbf044ea3ddf2e1c0e4021f87dbee7a690f072234dd92fb14693"
+      "sha256": "8a4a52a1066fc07255231a416c6379de34fcf300e4af327664bc2345902c9b64"
     },
     {
       "path": "results/batch/sine_1000hz.analysis.json",
       "bytes": 749,
-      "sha256": "c7f4e749264aa5cfb6d2b17c8bcc3ddfc3af46093e8bac596b7f727de8b43ac7"
+      "sha256": "edc026412c3b1eacabdbfc7c89e32a8b054bcfc663fbc30fb819c368bfd79fd2"
     },
     {
       "path": "results/batch/sine_100hz.analysis.json",
       "bytes": 745,
-      "sha256": "d832c6b17091514121491cdf801af55b005fe7fd385c86941fc7074158f62d6a"
+      "sha256": "101037600d1a6494931a7c1ea39d00c4061a350608d05b82ed318de849dc2511"
     },
     {
       "path": "results/sine_1000hz.analysis.json",
@@ -326,24 +361,24 @@
       "sha256": "6c6c724b755a2f1c113f27d2394bf658f3f211d1bd7a41156834f7fc137071e5"
     },
     {
-      "path": "scripts/__pycache__/analyze_wav.cpython-313.pyc",
-      "bytes": 8603,
-      "sha256": "90c3d67b270d67dfa86641960585ed86ba313a0d0f8e15cbbf11f8e8a785891a"
+      "path": "scripts/__pycache__/analyze_wav.cpython-312.pyc",
+      "bytes": 8664,
+      "sha256": "faf529984acf3911a412206bbf2b6a57d1d724f789c6c5389c29d8d7ad7ff995"
     },
     {
-      "path": "scripts/__pycache__/validate_results.cpython-313.pyc",
-      "bytes": 3582,
-      "sha256": "0a948bdda0fdf750a83ec3804b4cdd01f47b0cf8e0f87d57769eb56280b60b78"
+      "path": "scripts/alias_test.py",
+      "bytes": 7961,
+      "sha256": "399ea0422786043c73b24fde1984bc1eefcfa9118c07824ea3fc23f6353bdf28"
     },
     {
       "path": "scripts/analyze_wav.py",
-      "bytes": 4403,
-      "sha256": "3b9af2e4277f37362067a158af4dc328c1adfd3855ee38c240e2c177b99ca39c"
+      "bytes": 4438,
+      "sha256": "0182906654f1510ae619fd3ddc43aea8334afa7c3764cff0585ffeb651e4e578"
     },
     {
       "path": "scripts/arc_audiobench.py",
-      "bytes": 1820,
-      "sha256": "0769f0a3cbc40f3e4f4579e113b3800373d9438f2d0de36f43893dd485cc8376"
+      "bytes": 2408,
+      "sha256": "1f968565204ad418a18c79a56f0de0c7db4adb6dadffc2957bea0d347256e737"
     },
     {
       "path": "scripts/batch_analyze.py",
@@ -357,28 +392,28 @@
     },
     {
       "path": "scripts/generate_test_tones.py",
-      "bytes": 1801,
-      "sha256": "fbbd2054f692ca22ac4a1849998e0ee12e63bc894308494c86f9488c76f1d762"
+      "bytes": 3276,
+      "sha256": "d48e415f1e47af0dee7406b015366dc83541a7c12f2c293502bb1e191b5a14b0"
     },
     {
       "path": "scripts/make_evidence_pack.py",
-      "bytes": 1854,
-      "sha256": "5de836305fef05b16cfb80b5ef6ba4012ffc4a282fad5b0f35d58155a1145f12"
+      "bytes": 1890,
+      "sha256": "ec0a653a2b9866c4e208cd00f972f2a063889bc05797c2c1637d99ec090e2ae4"
     },
     {
       "path": "scripts/pluginval_wrapper.py",
-      "bytes": 1437,
-      "sha256": "acb32fdf8ea8680c1953895a169f1c5420b65979464907ad942ac7c75aa937f8"
+      "bytes": 1473,
+      "sha256": "a971b75660bee25ac7dd0bba96cf35e2a93625a1f92bece1971eb497473703ae"
     },
     {
       "path": "scripts/report_results.py",
-      "bytes": 2676,
-      "sha256": "83c76da335b1c1fc190c5cce8d49a6d40a8a5429dee00f375823c924ee9dcee4"
+      "bytes": 2712,
+      "sha256": "1385ca16bc7bc9594a466c2e9a44f41de552489e84941aac9168257ce934acf2"
     },
     {
       "path": "scripts/validate_repo.py",
-      "bytes": 1657,
-      "sha256": "871fcc9c9e9177d45e7676a33b18aa461123349a3587242ab360abe203b46f41"
+      "bytes": 2372,
+      "sha256": "dbae7474d8c9241243eb972209ea38d0ab1c5f773adcfef411f4f88fc379fc0c"
     },
     {
       "path": "scripts/validate_results.py",
@@ -392,78 +427,5 @@
     "python3 scripts/validate_results.py results/sine_1000hz.analysis.json",
     "python3 scripts/report_results.py results --out reports/index.html --markdown reports/summary.md",
     "python3 scripts/validate_repo.py"
-  ],
-  "referenced_garebear99_repositories": [
-    {
-      "name": "FreeEQ8",
-      "url": "https://github.com/GareBear99/FreeEQ8",
-      "category": "product-anchor"
-    },
-    {
-      "name": "FreeVox8",
-      "url": "https://github.com/GareBear99/FreeVox8",
-      "category": "product-anchor"
-    },
-    {
-      "name": "Voxel Audio",
-      "url": "https://github.com/GareBear99/Voxel_Audio",
-      "category": "product-anchor"
-    },
-    {
-      "name": "ARC-Neuron LLMBuilder",
-      "url": "https://github.com/GareBear99/ARC-Neuron-LLMBuilder",
-      "category": "governance-reference"
-    },
-    {
-      "name": "ARC-Core",
-      "url": "https://github.com/GareBear99/ARC-Core",
-      "category": "governance-reference"
-    },
-    {
-      "name": "Arc-RAR",
-      "url": "https://github.com/GareBear99/Arc-RAR",
-      "category": "governance-reference"
-    },
-    {
-      "name": "OmniBinary Runtime",
-      "url": "https://github.com/GareBear99/omnibinary-runtime",
-      "category": "governance-reference"
-    },
-    {
-      "name": "Awesome Audio Plugins & Dev",
-      "url": "https://github.com/GareBear99/awesome-audio-plugins-dev",
-      "category": "seo-discovery"
-    },
-    {
-      "name": "Awesome Audio Lists",
-      "url": "https://github.com/GareBear99/awesome-audio-lists",
-      "category": "seo-discovery"
-    },
-    {
-      "name": "Awesome Music Platforms",
-      "url": "https://github.com/GareBear99/awesome-music-platforms",
-      "category": "seo-discovery"
-    },
-    {
-      "name": "Awesome Python Audio Science",
-      "url": "https://github.com/GareBear99/awesome-python-audio-science",
-      "category": "research-seo"
-    },
-    {
-      "name": "TizWildinEntertainmentHUB",
-      "url": "https://github.com/GareBear99/TizWildinEntertainmentHUB",
-      "category": "public-router"
-    },
-    {
-      "name": "TizWildin Release Vault",
-      "url": "https://github.com/GareBear99/TizWildin-Release-Vault",
-      "category": "public-router"
-    },
-    {
-      "name": "Instrudio",
-      "url": "https://github.com/GareBear99/Instrudio",
-      "category": "research-product-anchor"
-    }
-  ],
-  "ecosystem_reference_doc": "docs/ECOSYSTEM_REPO_REFERENCES.md"
+  ]
 }

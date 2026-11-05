@@ -1,0 +1,34 @@
+name: Validate ARC-AudioBench
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate test tones
+        run: python3 scripts/generate_test_tones.py
+      - name: Analyze a tone and validate the result
+        run: |
+          python3 scripts/analyze_wav.py data/test_tones/sine_1000hz.wav --out results/sine_1000hz.analysis.json
+          python3 scripts/validate_results.py results/sine_1000hz.analysis.json
+      - name: Batch analyze
+        run: python3 scripts/batch_analyze.py data/test_tones --out results/batch
+      - name: Alias test (band-limited sawtooth must pass)
+        run: python3 scripts/alias_test.py data/test_tones/sawtooth_bandlimited_997hz.wav --f0 997 --out results/alias/sawtooth_bandlimited_997hz.alias.json
+      - name: Alias test (naive sawtooth must fail -- negative control)
+        run: |
+          if python3 scripts/alias_test.py data/test_tones/sawtooth_naive_997hz.wav --f0 997 --out results/alias/sawtooth_naive_997hz.alias.json; then
+            echo "ERROR: naive sawtooth passed the alias test -- the test is not detecting aliasing"
+            exit 1
+          fi
+      - name: Report
+        run: python3 scripts/report_results.py results --out reports/index.html --markdown reports/summary.md
+      - name: Validate repo
+        run: python3 scripts/validate_repo.py

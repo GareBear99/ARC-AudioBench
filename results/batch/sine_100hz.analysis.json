@@ -6,7 +6,7 @@
   "label": "sine_100hz",
   "source_file": "data/test_tones/sine_100hz.wav",
   "sha256": "0865babfb0d1799280ecb82854e422b04003c03c974abb5f0fe6b76ea23f0d04",
-  "created_utc": "2026-05-06T11:21:14Z",
+  "created_utc": "2026-11-05T15:25:51Z",
   "sample_rate": 48000,
   "channels": 1,
   "sample_width_bytes": 2,

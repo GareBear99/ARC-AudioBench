@@ -1,7 +1,7 @@
 {
   "schema_version": "arc-audiobench-batch-v1",
   "input_dir": "data/test_tones",
-  "count": 6,
+  "count": 8,
   "results": [
     {
       "wav": "data/test_tones/impulse.wav",
@@ -11,6 +11,16 @@
     {
       "wav": "data/test_tones/log_sweep_20_20000hz.wav",
       "result": "results/batch/log_sweep_20_20000hz.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/sawtooth_bandlimited_997hz.wav",
+      "result": "results/batch/sawtooth_bandlimited_997hz.analysis.json",
+      "pass": true
+    },
+    {
+      "wav": "data/test_tones/sawtooth_naive_997hz.wav",
+      "result": "results/batch/sawtooth_naive_997hz.analysis.json",
       "pass": true
     },
     {

@@ -17,7 +17,7 @@ def main():
     ap.add_argument('--run', action='store_true', help='Actually execute pluginval')
     args=ap.parse_args()
     cmd=[args.pluginval, '--strictness-level', str(args.strictness), '--validate', args.plugin]
-    result={'schema_version':'arc-audiobench-pluginval-v1','created_utc':datetime.datetime.utcnow().isoformat()+'Z','command':cmd,'executed':False,'returncode':None,'stdout':'','stderr':''}
+    result={'schema_version':'arc-audiobench-pluginval-v1','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00','Z'),'command':cmd,'executed':False,'returncode':None,'stdout':'','stderr':''}
     if args.run:
         p=subprocess.run(cmd, text=True, capture_output=True)
         result.update({'executed':True,'returncode':p.returncode,'stdout':p.stdout,'stderr':p.stderr,'pass':p.returncode==0})

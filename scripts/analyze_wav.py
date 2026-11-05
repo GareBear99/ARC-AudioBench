@@ -82,7 +82,7 @@ def analyze(path: Path, label: str | None = None) -> dict:
         'label': label or path.stem,
         'source_file': str(path),
         'sha256': sha,
-        'created_utc': datetime.datetime.utcnow().replace(microsecond=0).isoformat() + 'Z',
+        'created_utc': datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z'),
         'sample_rate': sr,
         'channels': channels,
         'sample_width_bytes': width,
