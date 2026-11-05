@@ -1,0 +1,731 @@
+{
+  "schema_version": "arc-audiobench-cramping-v1",
+  "tool": "ARC-AudioBench",
+  "analysis_type": "cramping_test",
+  "input": "data/test_tones/sweep_peaking_8000hz.wav",
+  "filter": {
+    "type": "peaking",
+    "fc_hz": 8000.0,
+    "q": 1.0,
+    "gain_db": 12.0
+  },
+  "sample_rate_hz": 48000,
+  "sweep": {
+    "f_start_hz": 20.0,
+    "f_end_hz": 20000.0,
+    "duration_s": 8.0,
+    "input_amplitude": 0.5,
+    "reference_wav": null
+  },
+  "geometric_mean_hz": 13856.406,
+  "error_at_geometric_mean_db": -2.026,
+  "error_at_geometric_mean_frequency_hz": 14069.285,
+  "error_at_fc_db": -4.011,
+  "max_abs_error_db": 4.011,
+  "max_error_db_threshold": 1.0,
+  "pass": false,
+  "points": [
+    {
+      "frequency_hz": 23.107,
+      "digital_mag_db": -0.01,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.01
+    },
+    {
+      "frequency_hz": 24.481,
+      "digital_mag_db": -0.279,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.279
+    },
+    {
+      "frequency_hz": 25.937,
+      "digital_mag_db": 0.069,
+      "analogue_mag_db": 0.0,
+      "error_db": 0.069
+    },
+    {
+      "frequency_hz": 27.479,
+      "digital_mag_db": -0.19,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.19
+    },
+    {
+      "frequency_hz": 29.113,
+      "digital_mag_db": 0.081,
+      "analogue_mag_db": 0.0,
+      "error_db": 0.08
+    },
+    {
+      "frequency_hz": 30.844,
+      "digital_mag_db": -0.071,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.071
+    },
+    {
+      "frequency_hz": 32.678,
+      "digital_mag_db": 0.231,
+      "analogue_mag_db": 0.0,
+      "error_db": 0.231
+    },
+    {
+      "frequency_hz": 34.621,
+      "digital_mag_db": -0.227,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.227
+    },
+    {
+      "frequency_hz": 36.68,
+      "digital_mag_db": 0.044,
+      "analogue_mag_db": 0.0,
+      "error_db": 0.044
+    },
+    {
+      "frequency_hz": 38.861,
+      "digital_mag_db": -0.016,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.017
+    },
+    {
+      "frequency_hz": 41.172,
+      "digital_mag_db": 0.213,
+      "analogue_mag_db": 0.0,
+      "error_db": 0.213
+    },
+    {
+      "frequency_hz": 43.62,
+      "digital_mag_db": -0.002,
+      "analogue_mag_db": 0.0,
+      "error_db": -0.002
+    },
+    {
+      "frequency_hz": 46.214,
+      "digital_mag_db": -0.017,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.018
+    },
+    {
+      "frequency_hz": 48.962,
+      "digital_mag_db": -0.142,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.142
+    },
+    {
+      "frequency_hz": 51.874,
+      "digital_mag_db": -0.023,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.023
+    },
+    {
+      "frequency_hz": 54.958,
+      "digital_mag_db": 0.163,
+      "analogue_mag_db": 0.001,
+      "error_db": 0.162
+    },
+    {
+      "frequency_hz": 58.226,
+      "digital_mag_db": -0.09,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.091
+    },
+    {
+      "frequency_hz": 61.688,
+      "digital_mag_db": 0.083,
+      "analogue_mag_db": 0.001,
+      "error_db": 0.082
+    },
+    {
+      "frequency_hz": 65.357,
+      "digital_mag_db": -0.083,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.084
+    },
+    {
+      "frequency_hz": 69.243,
+      "digital_mag_db": 0.074,
+      "analogue_mag_db": 0.001,
+      "error_db": 0.073
+    },
+    {
+      "frequency_hz": 73.36,
+      "digital_mag_db": -0.039,
+      "analogue_mag_db": 0.001,
+      "error_db": -0.04
+    },
+    {
+      "frequency_hz": 77.723,
+      "digital_mag_db": -0.024,
+      "analogue_mag_db": 0.002,
+      "error_db": -0.025
+    },
+    {
+      "frequency_hz": 82.344,
+      "digital_mag_db": -0.007,
+      "analogue_mag_db": 0.002,
+      "error_db": -0.008
+    },
+    {
+      "frequency_hz": 87.241,
+      "digital_mag_db": 0.051,
+      "analogue_mag_db": 0.002,
+      "error_db": 0.05
+    },
+    {
+      "frequency_hz": 92.428,
+      "digital_mag_db": -0.064,
+      "analogue_mag_db": 0.002,
+      "error_db": -0.066
+    },
+    {
+      "frequency_hz": 97.924,
+      "digital_mag_db": -0.025,
+      "analogue_mag_db": 0.002,
+      "error_db": -0.027
+    },
+    {
+      "frequency_hz": 103.747,
+      "digital_mag_db": 0.034,
+      "analogue_mag_db": 0.003,
+      "error_db": 0.031
+    },
+    {
+      "frequency_hz": 109.916,
+      "digital_mag_db": 0.056,
+      "analogue_mag_db": 0.003,
+      "error_db": 0.053
+    },
+    {
+      "frequency_hz": 116.452,
+      "digital_mag_db": -0.083,
+      "analogue_mag_db": 0.003,
+      "error_db": -0.086
+    },
+    {
+      "frequency_hz": 123.377,
+      "digital_mag_db": 0.077,
+      "analogue_mag_db": 0.004,
+      "error_db": 0.073
+    },
+    {
+      "frequency_hz": 130.713,
+      "digital_mag_db": -0.068,
+      "analogue_mag_db": 0.004,
+      "error_db": -0.072
+    },
+    {
+      "frequency_hz": 138.486,
+      "digital_mag_db": 0.067,
+      "analogue_mag_db": 0.005,
+      "error_db": 0.062
+    },
+    {
+      "frequency_hz": 146.721,
+      "digital_mag_db": -0.028,
+      "analogue_mag_db": 0.005,
+      "error_db": -0.034
+    },
+    {
+      "frequency_hz": 155.445,
+      "digital_mag_db": -0.024,
+      "analogue_mag_db": 0.006,
+      "error_db": -0.03
+    },
+    {
+      "frequency_hz": 164.688,
+      "digital_mag_db": 0.01,
+      "analogue_mag_db": 0.007,
+      "error_db": 0.003
+    },
+    {
+      "frequency_hz": 174.481,
+      "digital_mag_db": 0.058,
+      "analogue_mag_db": 0.008,
+      "error_db": 0.05
+    },
+    {
+      "frequency_hz": 184.856,
+      "digital_mag_db": -0.034,
+      "analogue_mag_db": 0.009,
+      "error_db": -0.043
+    },
+    {
+      "frequency_hz": 195.849,
+      "digital_mag_db": 0.04,
+      "analogue_mag_db": 0.01,
+      "error_db": 0.03
+    },
+    {
+      "frequency_hz": 207.494,
+      "digital_mag_db": -0.025,
+      "analogue_mag_db": 0.011,
+      "error_db": -0.036
+    },
+    {
+      "frequency_hz": 219.833,
+      "digital_mag_db": 0.049,
+      "analogue_mag_db": 0.012,
+      "error_db": 0.037
+    },
+    {
+      "frequency_hz": 232.905,
+      "digital_mag_db": -0.005,
+      "analogue_mag_db": 0.014,
+      "error_db": -0.019
+    },
+    {
+      "frequency_hz": 246.754,
+      "digital_mag_db": 0.01,
+      "analogue_mag_db": 0.015,
+      "error_db": -0.006
+    },
+    {
+      "frequency_hz": 261.426,
+      "digital_mag_db": 0.016,
+      "analogue_mag_db": 0.017,
+      "error_db": -0.001
+    },
+    {
+      "frequency_hz": 276.972,
+      "digital_mag_db": 0.008,
+      "analogue_mag_db": 0.019,
+      "error_db": -0.011
+    },
+    {
+      "frequency_hz": 293.441,
+      "digital_mag_db": 0.003,
+      "analogue_mag_db": 0.022,
+      "error_db": -0.019
+    },
+    {
+      "frequency_hz": 310.89,
+      "digital_mag_db": 0.047,
+      "analogue_mag_db": 0.024,
+      "error_db": 0.023
+    },
+    {
+      "frequency_hz": 329.377,
+      "digital_mag_db": 0.015,
+      "analogue_mag_db": 0.027,
+      "error_db": -0.012
+    },
+    {
+      "frequency_hz": 348.962,
+      "digital_mag_db": 0.033,
+      "analogue_mag_db": 0.031,
+      "error_db": 0.002
+    },
+    {
+      "frequency_hz": 369.713,
+      "digital_mag_db": 0.007,
+      "analogue_mag_db": 0.035,
+      "error_db": -0.028
+    },
+    {
+      "frequency_hz": 391.697,
+      "digital_mag_db": 0.045,
+      "analogue_mag_db": 0.039,
+      "error_db": 0.006
+    },
+    {
+      "frequency_hz": 414.989,
+      "digital_mag_db": 0.027,
+      "analogue_mag_db": 0.044,
+      "error_db": -0.016
+    },
+    {
+      "frequency_hz": 439.665,
+      "digital_mag_db": 0.052,
+      "analogue_mag_db": 0.049,
+      "error_db": 0.003
+    },
+    {
+      "frequency_hz": 465.809,
+      "digital_mag_db": 0.028,
+      "analogue_mag_db": 0.055,
+      "error_db": -0.027
+    },
+    {
+      "frequency_hz": 493.507,
+      "digital_mag_db": 0.051,
+      "analogue_mag_db": 0.062,
+      "error_db": -0.01
+    },
+    {
+      "frequency_hz": 522.853,
+      "digital_mag_db": 0.057,
+      "analogue_mag_db": 0.069,
+      "error_db": -0.012
+    },
+    {
+      "frequency_hz": 553.943,
+      "digital_mag_db": 0.066,
+      "analogue_mag_db": 0.078,
+      "error_db": -0.011
+    },
+    {
+      "frequency_hz": 586.883,
+      "digital_mag_db": 0.084,
+      "analogue_mag_db": 0.087,
+      "error_db": -0.003
+    },
+    {
+      "frequency_hz": 621.78,
+      "digital_mag_db": 0.07,
+      "analogue_mag_db": 0.098,
+      "error_db": -0.027
+    },
+    {
+      "frequency_hz": 658.753,
+      "digital_mag_db": 0.087,
+      "analogue_mag_db": 0.11,
+      "error_db": -0.023
+    },
+    {
+      "frequency_hz": 697.925,
+      "digital_mag_db": 0.114,
+      "analogue_mag_db": 0.123,
+      "error_db": -0.009
+    },
+    {
+      "frequency_hz": 739.426,
+      "digital_mag_db": 0.112,
+      "analogue_mag_db": 0.138,
+      "error_db": -0.027
+    },
+    {
+      "frequency_hz": 783.394,
+      "digital_mag_db": 0.121,
+      "analogue_mag_db": 0.155,
+      "error_db": -0.034
+    },
+    {
+      "frequency_hz": 829.977,
+      "digital_mag_db": 0.146,
+      "analogue_mag_db": 0.174,
+      "error_db": -0.028
+    },
+    {
+      "frequency_hz": 879.33,
+      "digital_mag_db": 0.158,
+      "analogue_mag_db": 0.195,
+      "error_db": -0.038
+    },
+    {
+      "frequency_hz": 931.618,
+      "digital_mag_db": 0.19,
+      "analogue_mag_db": 0.219,
+      "error_db": -0.029
+    },
+    {
+      "frequency_hz": 987.015,
+      "digital_mag_db": 0.201,
+      "analogue_mag_db": 0.246,
+      "error_db": -0.045
+    },
+    {
+      "frequency_hz": 1045.706,
+      "digital_mag_db": 0.229,
+      "analogue_mag_db": 0.276,
+      "error_db": -0.047
+    },
+    {
+      "frequency_hz": 1107.887,
+      "digital_mag_db": 0.25,
+      "analogue_mag_db": 0.31,
+      "error_db": -0.06
+    },
+    {
+      "frequency_hz": 1173.765,
+      "digital_mag_db": 0.286,
+      "analogue_mag_db": 0.348,
+      "error_db": -0.062
+    },
+    {
+      "frequency_hz": 1243.561,
+      "digital_mag_db": 0.326,
+      "analogue_mag_db": 0.39,
+      "error_db": -0.064
+    },
+    {
+      "frequency_hz": 1317.507,
+      "digital_mag_db": 0.365,
+      "analogue_mag_db": 0.438,
+      "error_db": -0.073
+    },
+    {
+      "frequency_hz": 1395.85,
+      "digital_mag_db": 0.406,
+      "analogue_mag_db": 0.491,
+      "error_db": -0.086
+    },
+    {
+      "frequency_hz": 1478.851,
+      "digital_mag_db": 0.454,
+      "analogue_mag_db": 0.551,
+      "error_db": -0.097
+    },
+    {
+      "frequency_hz": 1566.789,
+      "digital_mag_db": 0.51,
+      "analogue_mag_db": 0.619,
+      "error_db": -0.108
+    },
+    {
+      "frequency_hz": 1659.955,
+      "digital_mag_db": 0.576,
+      "analogue_mag_db": 0.694,
+      "error_db": -0.119
+    },
+    {
+      "frequency_hz": 1758.661,
+      "digital_mag_db": 0.652,
+      "analogue_mag_db": 0.779,
+      "error_db": -0.127
+    },
+    {
+      "frequency_hz": 1863.236,
+      "digital_mag_db": 0.726,
+      "analogue_mag_db": 0.874,
+      "error_db": -0.148
+    },
+    {
+      "frequency_hz": 1974.03,
+      "digital_mag_db": 0.814,
+      "analogue_mag_db": 0.98,
+      "error_db": -0.166
+    },
+    {
+      "frequency_hz": 2091.412,
+      "digital_mag_db": 0.919,
+      "analogue_mag_db": 1.099,
+      "error_db": -0.18
+    },
+    {
+      "frequency_hz": 2215.774,
+      "digital_mag_db": 1.028,
+      "analogue_mag_db": 1.233,
+      "error_db": -0.204
+    },
+    {
+      "frequency_hz": 2347.53,
+      "digital_mag_db": 1.159,
+      "analogue_mag_db": 1.383,
+      "error_db": -0.223
+    },
+    {
+      "frequency_hz": 2487.122,
+      "digital_mag_db": 1.298,
+      "analogue_mag_db": 1.55,
+      "error_db": -0.252
+    },
+    {
+      "frequency_hz": 2635.014,
+      "digital_mag_db": 1.463,
+      "analogue_mag_db": 1.738,
+      "error_db": -0.275
+    },
+    {
+      "frequency_hz": 2791.7,
+      "digital_mag_db": 1.644,
+      "analogue_mag_db": 1.949,
+      "error_db": -0.305
+    },
+    {
+      "frequency_hz": 2957.703,
+      "digital_mag_db": 1.845,
+      "analogue_mag_db": 2.185,
+      "error_db": -0.34
+    },
+    {
+      "frequency_hz": 3133.577,
+      "digital_mag_db": 2.081,
+      "analogue_mag_db": 2.45,
+      "error_db": -0.369
+    },
+    {
+      "frequency_hz": 3319.909,
+      "digital_mag_db": 2.337,
+      "analogue_mag_db": 2.746,
+      "error_db": -0.408
+    },
+    {
+      "frequency_hz": 3517.321,
+      "digital_mag_db": 2.63,
+      "analogue_mag_db": 3.077,
+      "error_db": -0.447
+    },
+    {
+      "frequency_hz": 3726.472,
+      "digital_mag_db": 2.96,
+      "analogue_mag_db": 3.448,
+      "error_db": -0.488
+    },
+    {
+      "frequency_hz": 3948.06,
+      "digital_mag_db": 3.337,
+      "analogue_mag_db": 3.864,
+      "error_db": -0.527
+    },
+    {
+      "frequency_hz": 4182.824,
+      "digital_mag_db": 3.757,
+      "analogue_mag_db": 4.328,
+      "error_db": -0.571
+    },
+    {
+      "frequency_hz": 4431.547,
+      "digital_mag_db": 4.237,
+      "analogue_mag_db": 4.847,
+      "error_db": -0.61
+    },
+    {
+      "frequency_hz": 4695.061,
+      "digital_mag_db": 4.78,
+      "analogue_mag_db": 5.426,
+      "error_db": -0.646
+    },
+    {
+      "frequency_hz": 4974.244,
+      "digital_mag_db": 5.394,
+      "analogue_mag_db": 6.071,
+      "error_db": -0.677
+    },
+    {
+      "frequency_hz": 5270.027,
+      "digital_mag_db": 6.06,
+      "analogue_mag_db": 6.785,
+      "error_db": -0.724
+    },
+    {
+      "frequency_hz": 5583.4,
+      "digital_mag_db": 6.574,
+      "analogue_mag_db": 7.569,
+      "error_db": -0.996
+    },
+    {
+      "frequency_hz": 5915.406,
+      "digital_mag_db": 6.96,
+      "analogue_mag_db": 8.42,
+      "error_db": -1.46
+    },
+    {
+      "frequency_hz": 6267.154,
+      "digital_mag_db": 7.273,
+      "analogue_mag_db": 9.317,
+      "error_db": -2.044
+    },
+    {
+      "frequency_hz": 6639.819,
+      "digital_mag_db": 7.537,
+      "analogue_mag_db": 10.221,
+      "error_db": -2.684
+    },
+    {
+      "frequency_hz": 7034.643,
+      "digital_mag_db": 7.741,
+      "analogue_mag_db": 11.052,
+      "error_db": -3.31
+    },
+    {
+      "frequency_hz": 7452.944,
+      "digital_mag_db": 7.886,
+      "analogue_mag_db": 11.688,
+      "error_db": -3.801
+    },
+    {
+      "frequency_hz": 7896.119,
+      "digital_mag_db": 7.978,
+      "analogue_mag_db": 11.989,
+      "error_db": -4.011
+    },
+    {
+      "frequency_hz": 8365.647,
+      "digital_mag_db": 7.927,
+      "analogue_mag_db": 11.873,
+      "error_db": -3.945
+    },
+    {
+      "frequency_hz": 8863.094,
+      "digital_mag_db": 7.808,
+      "analogue_mag_db": 11.372,
+      "error_db": -3.564
+    },
+    {
+      "frequency_hz": 9390.121,
+      "digital_mag_db": 7.595,
+      "analogue_mag_db": 10.612,
+      "error_db": -3.017
+    },
+    {
+      "frequency_hz": 9948.487,
+      "digital_mag_db": 7.3,
+      "analogue_mag_db": 9.729,
+      "error_db": -2.429
+    },
+    {
+      "frequency_hz": 10540.055,
+      "digital_mag_db": 6.901,
+      "analogue_mag_db": 8.822,
+      "error_db": -1.92
+    },
+    {
+      "frequency_hz": 11166.799,
+      "digital_mag_db": 6.36,
+      "analogue_mag_db": 7.947,
+      "error_db": -1.586
+    },
+    {
+      "frequency_hz": 11830.812,
+      "digital_mag_db": 5.501,
+      "analogue_mag_db": 7.131,
+      "error_db": -1.63
+    },
+    {
+      "frequency_hz": 12534.308,
+      "digital_mag_db": 4.593,
+      "analogue_mag_db": 6.385,
+      "error_db": -1.792
+    },
+    {
+      "frequency_hz": 13279.637,
+      "digital_mag_db": 3.786,
+      "analogue_mag_db": 5.709,
+      "error_db": -1.923
+    },
+    {
+      "frequency_hz": 14069.285,
+      "digital_mag_db": 3.075,
+      "analogue_mag_db": 5.101,
+      "error_db": -2.026
+    },
+    {
+      "frequency_hz": 14905.889,
+      "digital_mag_db": 2.446,
+      "analogue_mag_db": 4.556,
+      "error_db": -2.11
+    },
+    {
+      "frequency_hz": 15792.239,
+      "digital_mag_db": 1.899,
+      "analogue_mag_db": 4.067,
+      "error_db": -2.168
+    },
+    {
+      "frequency_hz": 16731.294,
+      "digital_mag_db": 1.424,
+      "analogue_mag_db": 3.63,
+      "error_db": -2.207
+    },
+    {
+      "frequency_hz": 17726.189,
+      "digital_mag_db": 1.02,
+      "analogue_mag_db": 3.24,
+      "error_db": -2.22
+    },
+    {
+      "frequency_hz": 18780.243,
+      "digital_mag_db": 0.821,
+      "analogue_mag_db": 2.891,
+      "error_db": -2.07
+    }
+  ]
+}

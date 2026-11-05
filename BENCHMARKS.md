@@ -56,6 +56,24 @@ criterion. Full method and the level-dependence note (the low-frequency
 NMR is set by the absolute threshold, so it depends on playback level)
 are in `docs/DSP_TEST_DESIGN.md`. Results live in `results/nmr/`.
 
+### Cramping test (Therum section 7 filter response, measured 2026-11-05, 48 kHz, reference RBJ renders)
+
+| Filter | f_geo | Analytical error | Sweep-measured error | Agreement |
+|---|---|---|---|---|
+| Peaking, fc 8000, +12 dB, Q 1.0 | 13856 Hz | -2.010 dB | -2.026 dB | 0.016 dB |
+| Lowpass, fc 8000, Q 0.707 | 13856 Hz | -3.983 dB | -4.201 dB | 0.218 dB |
+| Highpass, fc 8000, Q 0.707 | 13856 Hz | +0.281 dB | +0.271 dB | 0.010 dB |
+
+The sweep measurement matches the analytical error (from the z-transform
+of the coefficients vs the analogue prototype) for the same filter, so
+the test measures the cramping error correctly. The lowpass agreement is
+looser because its rolloff is steep within a 1/12-octave bin. The
+FreeEQ8 baseline (-3.383 dB at 18783 Hz) is their filter configuration's
+error; the error magnitude depends on fc, gain, Q, and sample rate.
+Full method and the peaking-at-fc bin-averaging note are in
+`docs/DSP_TEST_DESIGN.md`. Results live in `results/cramping/`; reference
+sweeps in `data/test_tones/sweep_*.wav`.
+
 ## Plugin benchmarks
 
 - pluginval strictness 10 result

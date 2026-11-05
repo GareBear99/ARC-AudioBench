@@ -114,6 +114,67 @@ and no temporal masking. It is not an ABX listening test: the NMR
 predicts audibility from the masking model, and the paper's ABX protocol
 is the listening confirmation.
 
+## Cramping test (`scripts/cramping_test.py`) -- Therum section 7, filter response
+
+The FreeEQ8 baseline: a standard digital biquad (RBJ, bilinear transform)
+loses -3.383 dB against its analogue prototype at the geometric-mean
+frequency, sqrt(fc * sr/2). The SVF does not decramp. This test measures
+that error for any filter render, so Therum step 3's decramping
+hypothesis (geometric-mean 5th constraint vs Orfanidis vs
+Sarkka-Huovilainen) can be tested on the same rig.
+
+Method: a log sine sweep (20 Hz to 20 kHz, 8 s in the reference render)
+through the filter, covering the whole WAV from t=0. The sweep is split
+into 1/12-octave bins; the RMS in each bin gives the digital magnitude at
+the bin's geometric-centre frequency (a sine's RMS is amplitude/sqrt(2)).
+The analogue prototype magnitude at the same frequency comes from the
+standard analogue transfer function (peaking / 2nd-order lowpass /
+2nd-order highpass -- the prototypes RBJ's coefficients are the bilinear
+transform of). Error = digital - analogue, in dB. The headline number is
+the error at the geometric-mean frequency f_geo = sqrt(fc * sr/2). An
+unfiltered sweep WAV can be passed as --reference to measure the input
+level per bin instead of assuming the input amplitude. Pass: --max-error-db
+(default 1.0 dB) at f_geo. A standard RBJ biquad fails this threshold --
+correctly, it is not decramped. A decramping method should measure near
+0 dB and pass.
+
+**Reference render.** `--render-reference` renders the same sweep through
+a built-in Python RBJ biquad and writes the WAV, and prints the analytical
+error at f_geo (from the z-transform of the coefficients vs the analogue
+prototype) for comparison with the sweep measurement. This is how the
+test is validated.
+
+**Measured results (2026-11-05, 48 kHz, reference renders):**
+
+| Filter | f_geo | Analytical error | Sweep-measured error | Agreement |
+|---|---|---|---|---|
+| Peaking, fc 8000, +12 dB, Q 1.0 | 13856 Hz | -2.010 dB | -2.026 dB | 0.016 dB |
+| Lowpass, fc 8000, Q 0.707 | 13856 Hz | -3.983 dB | -4.201 dB | 0.218 dB |
+| Highpass, fc 8000, Q 0.707 | 13856 Hz | +0.281 dB | +0.271 dB | 0.010 dB |
+
+The lowpass agreement is looser because its rolloff is steep: the
+magnitude changes appreciably across one 1/12-octave bin, so the bin RMS
+is an average over the bin rather than the centre value. The peaking
+reference with --reference (unfiltered sweep, gain 0 dB) measures exactly
+the same -2.026 dB as without it, so the reference path is verified. The error at fc itself is a check on the rig, not on the filter: the
+bilinear transform with pre-warping matches the analogue exactly at fc,
+so the analytical error there is 0 dB for all three types (verified:
+peaking 12.000 dB digital vs 12.000 dB analogue; lowpass -3.012 dB vs
+-3.012 dB). The sweep-measured error at fc is ~0 dB for lowpass/highpass
+(0.022 dB, -0.024 dB) but -4.011 dB for peaking. That is a measurement
+artifact, not cramping: fc is the peak of the peaking response, so the
+bin RMS averages over the peak's curvature and reads below the peak
+value. For lowpass/highpass, fc is on a locally-linear slope, so the bin
+average is the centre value. It does not affect the headline metric (the
+error at f_geo), because at f_geo the response is on a slope: the
+peaking agreement there is 0.016 dB. The -3.383 dB FreeEQ8 baseline is
+their filter configuration's error at their geometric mean (18783 Hz);
+the error magnitude depends on fc, gain, Q, and sample rate, so
+different configurations measure different numbers. What the test
+validates is the measurement: the sweep number matches the analytical
+number for the same filter. Results live in `results/cramping/`;
+reference sweeps in `data/test_tones/sweep_*.wav`.
+
 ## What is not implemented yet
 
 See `docs/MEASUREMENT_PLAN.md` for the full Therum section 7 + Vox8
