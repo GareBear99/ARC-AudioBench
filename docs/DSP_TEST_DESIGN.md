@@ -175,6 +175,72 @@ validates is the measurement: the sweep number matches the analytical
 number for the same filter. Results live in `results/cramping/`;
 reference sweeps in `data/test_tones/sweep_*.wav`.
 
+## STOI test (`scripts/stoi_test.py`) -- Vox8 intelligibility
+
+Taal et al. 2011: the objective intelligibility of a degraded speech
+signal against a clean reference. For Vox8 the clean reference is the
+dry modulator (spoken vocal) and the degraded signal is the vocoded
+output; the fixed corpus is 10 Harvard/IEEE sentences, one male and one
+female speaker. This script reports the scalar STOI and all 15
+one-third-octave band scores.
+
+Method (the published algorithm, clean-room implementation, stdlib
+only): resample both signals to 10 kHz (windowed-sinc FIR lowpass +
+linear interpolation); STFT, Hann window 256 samples, hop 128; group
+the magnitude spectrum into 15 one-third-octave bands (centre
+frequencies 150 Hz to ~3.8 kHz, band edges at the geometric means of
+adjacent centres, band value = sum of magnitudes in the band); remove
+silent frames (clean frame energy more than 40 dB below the maximum);
+split into short-time segments of 30 frames (384 ms); in each segment
+and band, normalise the degraded envelope to the clean envelope's
+energy, clip it from below at -15 dB relative to the clean envelope,
+and take the Pearson correlation. STOI is the mean correlation over all
+bands and segments, in [0, 1].
+
+**What it is not.** It is not the reference MATLAB code: the resampler
+is a windowed-sinc FIR + linear interpolation (not a polyphase filter),
+and the band grouping sums magnitudes (not powers). It is not a
+listening test: STOI predicts intelligibility from the signal, and the
+Vox8 listening protocol is the confirmation. It does not measure
+quality, musicality, or the top octave: STOI is defined at 10 kHz, so
+it says nothing above 5 kHz, where Air lives. And it needs time
+alignment: a misaligned degraded signal scores lower for alignment, not
+for intelligibility -- compensate the Ghost frame delay (~23 ms at
+44.1 kHz) before running it.
+
+**Speech corpus: there is none in this repo.** The test signal
+generator (`--generate-test`) synthesises a speech-like signal (vowel
+formants, pitch contour, syllabic amplitude) so the implementation can
+be validated without a corpus. STOI numbers on the synthetic signal are
+for relative comparison and for validating the implementation -- they
+are NOT a claim about Vox8's intelligibility on real speech. A real
+Vox8 measurement needs a real speech corpus and a FreeVox8 render.
+
+**Measured results (2026-11-05, synthetic speech-like signal, 3 s, 10 kHz):**
+
+| Degradation | STOI |
+|---|---|
+| Identity (clean vs clean) | 1.000 |
+| Silence (clean vs silence) | 0.000 |
+| Gain x0.5 / x2.0 (pure gain change) | 1.000 / 1.000 |
+| Time shift 12.8 ms (one frame) | 0.860 |
+| White noise, SNR +10 dB | 0.511 |
+| White noise, SNR +5 dB | 0.416 |
+| White noise, SNR 0 dB | 0.315 |
+| White noise, SNR -5 dB | 0.217 |
+| Vocoder-like (noise shaped by the envelope) | 0.481 |
+
+Identity = 1.0 exactly, silence = 0, gain invariance holds, and STOI
+is monotone in SNR -- the implementation behaves as STOI should. The
+absolute numbers are for the synthetic signal only; on real speech the
+same degradations score differently. Note on sample rate: STOI is
+defined at 10 kHz, so noise above 5 kHz does not count. A 48 kHz render
+with white noise at 0 dB SNR scores 0.489, not 0.315, because the
+resampler's anti-alias filter removes the out-of-band noise and the
+in-band SNR is effectively ~+7 dB. When comparing SNRs across sample
+rates, compare the in-band SNR. Results live in `results/stoi/`; the
+test signal is `data/test_tones/stoi_speech_like.wav`.
+
 ## What is not implemented yet
 
 See `docs/MEASUREMENT_PLAN.md` for the full Therum section 7 + Vox8

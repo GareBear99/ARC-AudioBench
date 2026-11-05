@@ -19,6 +19,7 @@ def main():
     al=sub.add_parser('alias'); al.add_argument('wav'); al.add_argument('--f0', type=float, required=True); al.add_argument('--out'); al.add_argument('--label'); al.add_argument('--worst-alias-db', type=float, default=-60.0); al.add_argument('--asr-db', type=float, default=-40.0)
     nm=sub.add_parser('nmr'); nm.add_argument('wav'); nm.add_argument('--f0', type=float, required=True); nm.add_argument('--out'); nm.add_argument('--label'); nm.add_argument('--ref-spl', type=float, default=96.0); nm.add_argument('--nmr-db', type=float, default=0.0)
     cr=sub.add_parser('cramping'); cr.add_argument('wav'); cr.add_argument('--type', dest='filter_type', default='peaking', choices=['peaking','lowpass','highpass']); cr.add_argument('--fc', type=float, default=8000.0); cr.add_argument('--q', type=float, default=1.0); cr.add_argument('--gain-db', type=float, default=12.0); cr.add_argument('--out'); cr.add_argument('--max-error-db', type=float, default=1.0); cr.add_argument('--reference'); cr.add_argument('--input-amplitude', type=float, default=0.5); cr.add_argument('--f-start', type=float, default=20.0); cr.add_argument('--f-end', type=float, default=20000.0)
+    st=sub.add_parser('stoi'); st.add_argument('clean'); st.add_argument('degraded'); st.add_argument('--out')
     sub.add_parser('evidence')
     sub.add_parser('validate-repo')
     args=ap.parse_args()
@@ -51,6 +52,10 @@ def main():
              '--f-start', str(args.f_start), '--f-end', str(args.f_end)]
         if args.out: cmd += ['--out', args.out]
         if args.reference: cmd += ['--reference', args.reference]
+        return run(*cmd)
+    if args.cmd=='stoi':
+        cmd=['stoi_test.py', args.clean, args.degraded]
+        if args.out: cmd += ['--out', args.out]
         return run(*cmd)
     if args.cmd=='evidence': return run('make_evidence_pack.py')
     if args.cmd=='validate-repo': return run('validate_repo.py')

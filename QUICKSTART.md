@@ -72,13 +72,28 @@ were rendered through a built-in RBJ biquad; use
 the default 1 dB threshold (it is not decramped); a decramping method
 should measure near 0 dB. See `docs/DSP_TEST_DESIGN.md`.
 
-## 9. Make release evidence
+## 9. STOI test (Vox8 intelligibility)
+
+```bash
+python3 scripts/stoi_test.py --generate-test data/test_tones/stoi_speech_like.wav
+python3 scripts/stoi_test.py data/test_tones/stoi_speech_like.wav data/test_tones/stoi_speech_like_noisy0db.wav --out results/stoi/speech_like_vs_noisy0db.stoi.json
+```
+
+Objective intelligibility of a degraded speech signal vs a clean
+reference (Taal et al. 2011). For Vox8: clean = dry modulator, degraded
+= vocoded output. There is no speech corpus in the repo yet, so
+`--generate-test` synthesises a speech-like signal for validation; a
+real Vox8 measurement needs a real corpus and a FreeVox8 render. The
+signals must be time-aligned and the same length. See
+`docs/DSP_TEST_DESIGN.md`.
+
+## 10. Make release evidence
 
 ```bash
 python3 scripts/make_evidence_pack.py
 ```
 
-## 10. Validate the whole repo
+## 11. Validate the whole repo
 
 ```bash
 python3 scripts/validate_repo.py
@@ -92,6 +107,7 @@ python3 scripts/arc_audiobench.py batch data/test_tones --out results/batch
 python3 scripts/arc_audiobench.py alias data/test_tones/sawtooth_bandlimited_997hz.wav --f0 997 --out results/alias/sawtooth_bandlimited_997hz.alias.json
 python3 scripts/arc_audiobench.py nmr data/test_tones/sawtooth_bandlimited_997hz.wav --f0 997 --out results/nmr/sawtooth_bandlimited_997hz.nmr.json
 python3 scripts/arc_audiobench.py cramping data/test_tones/sweep_peaking_8000hz.wav --type peaking --fc 8000 --q 1.0 --gain-db 12 --out results/cramping/sweep_peaking_8000hz.cramping.json
+python3 scripts/arc_audiobench.py stoi data/test_tones/stoi_speech_like.wav data/test_tones/stoi_speech_like_noisy0db.wav --out results/stoi/speech_like_vs_noisy0db.stoi.json
 python3 scripts/arc_audiobench.py report results --out reports/index.html
 python3 scripts/arc_audiobench.py evidence
 ```

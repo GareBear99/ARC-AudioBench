@@ -74,6 +74,29 @@ Full method and the peaking-at-fc bin-averaging note are in
 `docs/DSP_TEST_DESIGN.md`. Results live in `results/cramping/`; reference
 sweeps in `data/test_tones/sweep_*.wav`.
 
+### STOI (Vox8 intelligibility, measured 2026-11-05, synthetic speech-like signal, 3 s, 10 kHz)
+
+| Degradation | STOI |
+|---|---|
+| Identity (clean vs clean) | 1.000 |
+| Silence (clean vs silence) | 0.000 |
+| Gain x0.5 / x2.0 | 1.000 / 1.000 |
+| Time shift 12.8 ms | 0.860 |
+| White noise, SNR +10 dB | 0.511 |
+| White noise, SNR +5 dB | 0.416 |
+| White noise, SNR 0 dB | 0.315 |
+| White noise, SNR -5 dB | 0.217 |
+| Vocoder-like (noise shaped by the envelope) | 0.481 |
+
+Identity = 1.0, silence = 0, gain invariance holds, STOI is monotone in
+SNR. These numbers are for the synthetic speech-like test signal only
+(no speech corpus in the repo yet) -- they validate the implementation,
+they are not a claim about Vox8's intelligibility on real speech. A
+48 kHz render with white noise at 0 dB SNR scores 0.489, because the
+resampler's anti-alias filter removes the out-of-band noise (effective
+in-band SNR ~+7 dB). Full method and the sample-rate note are in
+`docs/DSP_TEST_DESIGN.md`. Results live in `results/stoi/`.
+
 ## Plugin benchmarks
 
 - pluginval strictness 10 result
