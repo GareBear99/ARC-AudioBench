@@ -1,0 +1,209 @@
+{
+  "schema_version": "arc-audiobench-nmr-v1",
+  "tool": "ARC-AudioBench",
+  "tool_version": "1.0.0-rc1",
+  "analysis_type": "nmr_test",
+  "label": "therum_naive_997hz",
+  "source_file": "/home/hatch/workspace/Therum_JUCE-Plugin/Therum-Core-Engine/Tests/wavetable_997hz_naive.wav",
+  "fundamental_hz": 997.0,
+  "sample_rate": 48000,
+  "channels": 1,
+  "fft_size": 16384,
+  "window_seconds": 0.341333,
+  "skip_seconds": 0.5,
+  "noise_floor_dbfs": -80.0,
+  "reference_spl_db": 96.0,
+  "reference_note": "0 dBFS taken as 96.0 dB SPL; the ATH contribution depends on this, the simultaneous-masking part does not.",
+  "fundamental_dbfs": -4.463,
+  "harmonic_peak_count": 24,
+  "alias_peak_count": 1716,
+  "worst_nmr_db": 42.043,
+  "worst_nmr_hz": 287.109,
+  "worst_nmr_simultaneous_db": 76.549,
+  "worst_nmr_simultaneous_hz": 287.109,
+  "nmr_threshold_db": 0.0,
+  "aliases": [
+    {
+      "frequency_hz": 287.109,
+      "level_dbfs": -44.106,
+      "masking_threshold_db_spl": 9.851,
+      "masking_threshold_simultaneous_db_spl": -24.655,
+      "ath_db_spl": 9.85,
+      "nmr_db": 42.043,
+      "nmr_simultaneous_db": 76.549
+    },
+    {
+      "frequency_hz": 143.555,
+      "level_dbfs": -37.682,
+      "masking_threshold_db_spl": 17.182,
+      "masking_threshold_simultaneous_db_spl": -58.91,
+      "ath_db_spl": 17.182,
+      "nmr_db": 41.136,
+      "nmr_simultaneous_db": 117.228
+    },
+    {
+      "frequency_hz": 430.664,
+      "level_dbfs": -48.311,
+      "masking_threshold_db_spl": 10.546,
+      "masking_threshold_simultaneous_db_spl": 7.935,
+      "ath_db_spl": 7.095,
+      "nmr_db": 37.144,
+      "nmr_simultaneous_db": 39.754
+    },
+    {
+      "frequency_hz": 421.875,
+      "level_dbfs": -50.211,
+      "masking_threshold_db_spl": 9.661,
+      "masking_threshold_simultaneous_db_spl": 6.002,
+      "ath_db_spl": 7.215,
+      "nmr_db": 36.128,
+      "nmr_simultaneous_db": 39.788
+    },
+    {
+      "frequency_hz": 278.32,
+      "level_dbfs": -52.819,
+      "masking_threshold_db_spl": 10.1,
+      "masking_threshold_simultaneous_db_spl": -26.712,
+      "ath_db_spl": 10.1,
+      "nmr_db": 33.081,
+      "nmr_simultaneous_db": 69.893
+    },
+    {
+      "frequency_hz": 298.828,
+      "level_dbfs": -57.262,
+      "masking_threshold_db_spl": 9.541,
+      "masking_threshold_simultaneous_db_spl": -21.922,
+      "ath_db_spl": 9.538,
+      "nmr_db": 29.198,
+      "nmr_simultaneous_db": 60.66
+    },
+    {
+      "frequency_hz": 410.156,
+      "level_dbfs": -59.25,
+      "masking_threshold_db_spl": 8.846,
+      "masking_threshold_simultaneous_db_spl": 3.41,
+      "ath_db_spl": 7.382,
+      "nmr_db": 27.904,
+      "nmr_simultaneous_db": 33.34
+    },
+    {
+      "frequency_hz": 442.383,
+      "level_dbfs": -58.528,
+      "masking_threshold_db_spl": 12.085,
+      "masking_threshold_simultaneous_db_spl": 10.499,
+      "ath_db_spl": 6.941,
+      "nmr_db": 25.387,
+      "nmr_simultaneous_db": 26.973
+    },
+    {
+      "frequency_hz": 266.602,
+      "level_dbfs": -60.374,
+      "masking_threshold_db_spl": 10.456,
+      "masking_threshold_simultaneous_db_spl": -29.464,
+      "ath_db_spl": 10.455,
+      "nmr_db": 25.171,
+      "nmr_simultaneous_db": 65.09
+    },
+    {
+      "frequency_hz": 155.273,
+      "level_dbfs": -56.157,
+      "masking_threshold_db_spl": 16.135,
+      "masking_threshold_simultaneous_db_spl": -56.069,
+      "ath_db_spl": 16.135,
+      "nmr_db": 23.708,
+      "nmr_simultaneous_db": 95.912
+    },
+    {
+      "frequency_hz": 131.836,
+      "level_dbfs": -54.313,
+      "masking_threshold_db_spl": 18.395,
+      "masking_threshold_simultaneous_db_spl": -61.755,
+      "ath_db_spl": 18.395,
+      "nmr_db": 23.292,
+      "nmr_simultaneous_db": 103.442
+    },
+    {
+      "frequency_hz": 310.547,
+      "level_dbfs": -63.653,
+      "masking_threshold_db_spl": 9.253,
+      "masking_threshold_simultaneous_db_spl": -19.2,
+      "ath_db_spl": 9.246,
+      "nmr_db": 23.095,
+      "nmr_simultaneous_db": 51.547
+    },
+    {
+      "frequency_hz": 398.438,
+      "level_dbfs": -65.175,
+      "masking_threshold_db_spl": 8.39,
+      "masking_threshold_simultaneous_db_spl": 0.803,
+      "ath_db_spl": 7.558,
+      "nmr_db": 22.435,
+      "nmr_simultaneous_db": 30.022
+    },
+    {
+      "frequency_hz": 254.883,
+      "level_dbfs": -65.728,
+      "masking_threshold_db_spl": 10.84,
+      "masking_threshold_simultaneous_db_spl": -32.227,
+      "ath_db_spl": 10.84,
+      "nmr_db": 19.432,
+      "nmr_simultaneous_db": 62.499
+    },
+    {
+      "frequency_hz": 454.102,
+      "level_dbfs": -64.23,
+      "masking_threshold_db_spl": 13.971,
+      "masking_threshold_simultaneous_db_spl": 13.047,
+      "ath_db_spl": 6.795,
+      "nmr_db": 17.8,
+      "nmr_simultaneous_db": 18.723
+    },
+    {
+      "frequency_hz": 166.992,
+      "level_dbfs": -63.316,
+      "masking_threshold_db_spl": 15.221,
+      "masking_threshold_simultaneous_db_spl": -53.236,
+      "ath_db_spl": 15.221,
+      "nmr_db": 17.463,
+      "nmr_simultaneous_db": 85.919
+    },
+    {
+      "frequency_hz": 322.266,
+      "level_dbfs": -69.622,
+      "masking_threshold_db_spl": 8.986,
+      "masking_threshold_simultaneous_db_spl": -16.49,
+      "ath_db_spl": 8.974,
+      "nmr_db": 17.392,
+      "nmr_simultaneous_db": 42.869
+    },
+    {
+      "frequency_hz": 386.719,
+      "level_dbfs": -71.148,
+      "masking_threshold_db_spl": 8.199,
+      "masking_threshold_simultaneous_db_spl": -1.82,
+      "ath_db_spl": 7.744,
+      "nmr_db": 16.653,
+      "nmr_simultaneous_db": 26.672
+    },
+    {
+      "frequency_hz": 123.047,
+      "level_dbfs": -61.705,
+      "masking_threshold_db_spl": 19.44,
+      "masking_threshold_simultaneous_db_spl": -63.893,
+      "ath_db_spl": 19.44,
+      "nmr_db": 14.855,
+      "nmr_simultaneous_db": 98.189
+    },
+    {
+      "frequency_hz": 243.164,
+      "level_dbfs": -71.28,
+      "masking_threshold_db_spl": 11.258,
+      "masking_threshold_simultaneous_db_spl": -34.999,
+      "ath_db_spl": 11.258,
+      "nmr_db": 13.462,
+      "nmr_simultaneous_db": 59.719
+    }
+  ],
+  "pass": false,
+  "created_utc": "2026-11-05T16:10:39Z"
+}

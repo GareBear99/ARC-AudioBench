@@ -1,0 +1,209 @@
+{
+  "schema_version": "arc-audiobench-nmr-v1",
+  "tool": "ARC-AudioBench",
+  "tool_version": "1.0.0-rc1",
+  "analysis_type": "nmr_test",
+  "label": "sawtooth_naive_997hz",
+  "source_file": "data/test_tones/sawtooth_naive_997hz.wav",
+  "fundamental_hz": 997.0,
+  "sample_rate": 48000,
+  "channels": 1,
+  "fft_size": 16384,
+  "window_seconds": 0.341333,
+  "skip_seconds": 0.5,
+  "noise_floor_dbfs": -80.0,
+  "reference_spl_db": 96.0,
+  "reference_note": "0 dBFS taken as 96.0 dB SPL; the ATH contribution depends on this, the simultaneous-masking part does not.",
+  "fundamental_dbfs": -10.484,
+  "harmonic_peak_count": 24,
+  "alias_peak_count": 2135,
+  "worst_nmr_db": 36.046,
+  "worst_nmr_hz": 287.109,
+  "worst_nmr_simultaneous_db": 76.572,
+  "worst_nmr_simultaneous_hz": 287.109,
+  "nmr_threshold_db": 0.0,
+  "aliases": [
+    {
+      "frequency_hz": 287.109,
+      "level_dbfs": -50.104,
+      "masking_threshold_db_spl": 9.85,
+      "masking_threshold_simultaneous_db_spl": -30.676,
+      "ath_db_spl": 9.85,
+      "nmr_db": 36.046,
+      "nmr_simultaneous_db": 76.572
+    },
+    {
+      "frequency_hz": 143.555,
+      "level_dbfs": -43.696,
+      "masking_threshold_db_spl": 17.182,
+      "masking_threshold_simultaneous_db_spl": -64.931,
+      "ath_db_spl": 17.182,
+      "nmr_db": 35.122,
+      "nmr_simultaneous_db": 117.234
+    },
+    {
+      "frequency_hz": 430.664,
+      "level_dbfs": -54.283,
+      "masking_threshold_db_spl": 8.246,
+      "masking_threshold_simultaneous_db_spl": 1.914,
+      "ath_db_spl": 7.095,
+      "nmr_db": 33.472,
+      "nmr_simultaneous_db": 39.803
+    },
+    {
+      "frequency_hz": 421.875,
+      "level_dbfs": -56.1,
+      "masking_threshold_db_spl": 7.967,
+      "masking_threshold_simultaneous_db_spl": -0.019,
+      "ath_db_spl": 7.215,
+      "nmr_db": 31.933,
+      "nmr_simultaneous_db": 39.92
+    },
+    {
+      "frequency_hz": 278.32,
+      "level_dbfs": -58.63,
+      "masking_threshold_db_spl": 10.1,
+      "masking_threshold_simultaneous_db_spl": -32.733,
+      "ath_db_spl": 10.1,
+      "nmr_db": 27.271,
+      "nmr_simultaneous_db": 70.103
+    },
+    {
+      "frequency_hz": 410.156,
+      "level_dbfs": -64.383,
+      "masking_threshold_db_spl": 7.797,
+      "masking_threshold_simultaneous_db_spl": -2.611,
+      "ath_db_spl": 7.382,
+      "nmr_db": 23.82,
+      "nmr_simultaneous_db": 34.228
+    },
+    {
+      "frequency_hz": 298.828,
+      "level_dbfs": -62.761,
+      "masking_threshold_db_spl": 9.538,
+      "masking_threshold_simultaneous_db_spl": -27.942,
+      "ath_db_spl": 9.538,
+      "nmr_db": 23.701,
+      "nmr_simultaneous_db": 61.181
+    },
+    {
+      "frequency_hz": 442.383,
+      "level_dbfs": -63.938,
+      "masking_threshold_db_spl": 8.892,
+      "masking_threshold_simultaneous_db_spl": 4.478,
+      "ath_db_spl": 6.941,
+      "nmr_db": 23.17,
+      "nmr_simultaneous_db": 27.584
+    },
+    {
+      "frequency_hz": 266.602,
+      "level_dbfs": -65.413,
+      "masking_threshold_db_spl": 10.455,
+      "masking_threshold_simultaneous_db_spl": -35.485,
+      "ath_db_spl": 10.455,
+      "nmr_db": 20.131,
+      "nmr_simultaneous_db": 66.072
+    },
+    {
+      "frequency_hz": 398.438,
+      "level_dbfs": -68.26,
+      "masking_threshold_db_spl": 7.782,
+      "masking_threshold_simultaneous_db_spl": -5.218,
+      "ath_db_spl": 7.558,
+      "nmr_db": 19.959,
+      "nmr_simultaneous_db": 32.959
+    },
+    {
+      "frequency_hz": 310.547,
+      "level_dbfs": -67.351,
+      "masking_threshold_db_spl": 9.248,
+      "masking_threshold_simultaneous_db_spl": -25.221,
+      "ath_db_spl": 9.246,
+      "nmr_db": 19.401,
+      "nmr_simultaneous_db": 53.87
+    },
+    {
+      "frequency_hz": 454.102,
+      "level_dbfs": -67.751,
+      "masking_threshold_db_spl": 9.922,
+      "masking_threshold_simultaneous_db_spl": 7.026,
+      "ath_db_spl": 6.795,
+      "nmr_db": 18.327,
+      "nmr_simultaneous_db": 21.223
+    },
+    {
+      "frequency_hz": 155.273,
+      "level_dbfs": -61.735,
+      "masking_threshold_db_spl": 16.135,
+      "masking_threshold_simultaneous_db_spl": -62.09,
+      "ath_db_spl": 16.135,
+      "nmr_db": 18.131,
+      "nmr_simultaneous_db": 96.356
+    },
+    {
+      "frequency_hz": 131.836,
+      "level_dbfs": -60.019,
+      "masking_threshold_db_spl": 18.395,
+      "masking_threshold_simultaneous_db_spl": -67.776,
+      "ath_db_spl": 18.395,
+      "nmr_db": 17.586,
+      "nmr_simultaneous_db": 103.757
+    },
+    {
+      "frequency_hz": 386.719,
+      "level_dbfs": -71.11,
+      "masking_threshold_db_spl": 7.862,
+      "masking_threshold_simultaneous_db_spl": -7.841,
+      "ath_db_spl": 7.744,
+      "nmr_db": 17.028,
+      "nmr_simultaneous_db": 32.73
+    },
+    {
+      "frequency_hz": 254.883,
+      "level_dbfs": -68.597,
+      "masking_threshold_db_spl": 10.84,
+      "masking_threshold_simultaneous_db_spl": -38.248,
+      "ath_db_spl": 10.84,
+      "nmr_db": 16.563,
+      "nmr_simultaneous_db": 65.651
+    },
+    {
+      "frequency_hz": 322.266,
+      "level_dbfs": -70.566,
+      "masking_threshold_db_spl": 8.977,
+      "masking_threshold_simultaneous_db_spl": -22.511,
+      "ath_db_spl": 8.974,
+      "nmr_db": 16.457,
+      "nmr_simultaneous_db": 47.946
+    },
+    {
+      "frequency_hz": 377.93,
+      "level_dbfs": -72.948,
+      "masking_threshold_db_spl": 7.962,
+      "masking_threshold_simultaneous_db_spl": -9.817,
+      "ath_db_spl": 7.889,
+      "nmr_db": 15.089,
+      "nmr_simultaneous_db": 32.869
+    },
+    {
+      "frequency_hz": 366.211,
+      "level_dbfs": -72.873,
+      "masking_threshold_db_spl": 8.131,
+      "masking_threshold_simultaneous_db_spl": -12.464,
+      "ath_db_spl": 8.093,
+      "nmr_db": 14.995,
+      "nmr_simultaneous_db": 35.591
+    },
+    {
+      "frequency_hz": 354.492,
+      "level_dbfs": -72.782,
+      "masking_threshold_db_spl": 8.329,
+      "masking_threshold_simultaneous_db_spl": -15.125,
+      "ath_db_spl": 8.309,
+      "nmr_db": 14.889,
+      "nmr_simultaneous_db": 38.343
+    }
+  ],
+  "pass": false,
+  "created_utc": "2026-11-05T16:10:39Z"
+}

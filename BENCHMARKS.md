@@ -37,6 +37,25 @@ the FFT scaling. Full method, thresholds, and the NMR caveat (this is the
 raw alias measurement, not a noise-to-mask ratio yet) are in
 `docs/DSP_TEST_DESIGN.md`. Results live in `results/alias/`.
 
+### NMR test (Therum section 7 acceptance test, measured 2026-11-05, 48 kHz, 997 Hz, ref 96 dB SPL)
+
+| Signal | Worst NMR | Worst alias | 22 kHz alias NMR | Pass |
+|---|---|---|---|---|
+| Therum mipped wavetable (step 2 render) | +23.31 dB @ 143.6 Hz | -55.51 dBFS | -69.80 dB | No |
+| Therum naive wavetable (control) | +42.04 dB @ 287.1 Hz | -44.11 dBFS | -- | No |
+| Naive sawtooth 997 Hz | +36.05 dB @ 287.1 Hz | -50.10 dBFS | -62.25 dB | No |
+| Band-limited sawtooth 997 Hz | -- (no aliases) | -- | -- | Yes |
+
+The 22 kHz alias the alias test flags as worst is well masked (NMR
+-69.80 dB on the Therum mipped render) -- it is inaudible. The aliases
+that fail the test are the low-frequency folded harmonics: the folded
+48th harmonic at 143.6 Hz (-55.51 dBFS, expected fold 48000 - 48*997 =
+144 Hz) sits 23.31 dB above the masking curve. The mipped engine is
+12.7-18.7 dB better than naive on worst NMR, but it still fails the
+criterion. Full method and the level-dependence note (the low-frequency
+NMR is set by the absolute threshold, so it depends on playback level)
+are in `docs/DSP_TEST_DESIGN.md`. Results live in `results/nmr/`.
+
 ## Plugin benchmarks
 
 - pluginval strictness 10 result

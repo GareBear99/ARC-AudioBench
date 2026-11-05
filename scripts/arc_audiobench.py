@@ -17,6 +17,7 @@ def main():
     r=sub.add_parser('report'); r.add_argument('results'); r.add_argument('--out', default='reports/index.html'); r.add_argument('--markdown', default='reports/summary.md')
     v=sub.add_parser('validate-result'); v.add_argument('result_json')
     al=sub.add_parser('alias'); al.add_argument('wav'); al.add_argument('--f0', type=float, required=True); al.add_argument('--out'); al.add_argument('--label'); al.add_argument('--worst-alias-db', type=float, default=-60.0); al.add_argument('--asr-db', type=float, default=-40.0)
+    nm=sub.add_parser('nmr'); nm.add_argument('wav'); nm.add_argument('--f0', type=float, required=True); nm.add_argument('--out'); nm.add_argument('--label'); nm.add_argument('--ref-spl', type=float, default=96.0); nm.add_argument('--nmr-db', type=float, default=0.0)
     sub.add_parser('evidence')
     sub.add_parser('validate-repo')
     args=ap.parse_args()
@@ -34,6 +35,12 @@ def main():
         if args.out: cmd += ['--out', args.out]
         if args.label: cmd += ['--label', args.label]
         cmd += ['--worst-alias-db', str(args.worst_alias_db), '--asr-db', str(args.asr_db)]
+        return run(*cmd)
+    if args.cmd=='nmr':
+        cmd=['nmr_test.py', args.wav, '--f0', str(args.f0)]
+        if args.out: cmd += ['--out', args.out]
+        if args.label: cmd += ['--label', args.label]
+        cmd += ['--ref-spl', str(args.ref_spl), '--nmr-db', str(args.nmr_db)]
         return run(*cmd)
     if args.cmd=='evidence': return run('make_evidence_pack.py')
     if args.cmd=='validate-repo': return run('validate_repo.py')
