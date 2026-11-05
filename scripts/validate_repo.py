@@ -4,7 +4,7 @@ import json, ast
 ROOT=Path(__file__).resolve().parents[1]
 required=[
  'README.md','QUICKSTART.md','BENCHMARKS.md','CITATION.cff','pyproject.toml','VERSION',
- 'scripts/generate_test_tones.py','scripts/analyze_wav.py','scripts/batch_analyze.py','scripts/report_results.py','scripts/validate_results.py','scripts/compare_outputs.py','scripts/pluginval_wrapper.py','scripts/make_evidence_pack.py','scripts/arc_audiobench.py','scripts/alias_test.py','scripts/nmr_test.py','scripts/cramping_test.py','scripts/stoi_test.py',
+ 'scripts/generate_test_tones.py','scripts/analyze_wav.py','scripts/batch_analyze.py','scripts/report_results.py','scripts/validate_results.py','scripts/compare_outputs.py','scripts/pluginval_wrapper.py','scripts/make_evidence_pack.py','scripts/arc_audiobench.py','scripts/alias_test.py','scripts/nmr_test.py','scripts/cramping_test.py','scripts/stoi_test.py','scripts/freeze_blur_test.py',
  'schemas/audio_bench_result.schema.json','config/default_thresholds.json','docs/SEO_KEYWORD_MAP.md','docs/FREEEQ8_INTEGRATION.md','docs/FREEVOX8_INTEGRATION.md','docs/RESEARCH_CITATION_LAYER.md','docs/PUBLIC_LAUNCH_PLAN.md','docs/COMPETITIVE_POSITIONING.md','docs/DAW_SMOKE_TEST_MATRIX.md','docs/FREEEQ8_BENCHMARK_SUITE.md','docs/ECOSYSTEM_REPO_REFERENCES.md','docs/FREEVOX8_BENCHMARK_SUITE.md',
  '.github/workflows/validate.yml','.github/ISSUE_TEMPLATE/plugin_benchmark.yml'
 ]

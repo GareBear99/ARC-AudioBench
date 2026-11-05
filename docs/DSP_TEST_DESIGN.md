@@ -241,6 +241,74 @@ in-band SNR is effectively ~+7 dB. When comparing SNRs across sample
 rates, compare the in-band SNR. Results live in `results/stoi/`; the
 test signal is `data/test_tones/stoi_speech_like.wav`.
 
+## Freeze-blur test (`scripts/freeze_blur_test.py`) -- Vox8 freeze pilot
+
+A sustained vibrato vowel (5-7 Hz, +/-0.5 semitone) is frozen (one
+STFT frame held and repeated). The freeze blurs the spectrum: the STFT
+window smears each harmonic across adjacent bins, and the vibrato
+smears it further while the pitch moves inside the analysis window.
+The WASPAA 2001 beta/lambda correction is supposed to sharpen the
+frozen spectrum. This test measures the blur so the correction can be
+judged, per harmonic:
+    blur_db = 20*log10(mean(|X[k-1]|, |X[k+1]|) / |X[k]|)
+A sharp peak has a very negative blur; a blurred peak has a blur
+closer to 0 dB. The headline numbers are the magnitude-weighted mean
+blur over the harmonics and the worst (least negative) single-harmonic
+blur. --compare runs the same measurement on two WAVs (corrected vs
+uncorrected freeze) and reports the difference -- the correction gain.
+The pilot's decision rule is written in advance in the Vox8 paper
+section 4: if the correction does not reduce the blur enough, the
+freeze blur stays a known bounded limitation. This script is the
+measurement; the decision is the paper's.
+
+Method: average magnitude spectrum (Hann window, FFT size 4096 by
+default for fine resolution -- this is the measurement instrument, not
+the code under test; FreeVox8's Ghost backend uses 1024). For each
+harmonic of f0 up to Nyquist, the peak bin is the max within +/-1 bin
+of the expected bin, and the blur is the adjacent-bin mean over the
+peak. Harmonics more than 60 dB below the strongest harmonic are
+dropped: they sit at the quantisation / numerical floor and their blur
+is meaningless.
+
+**The blur floor.** A Hann window puts the adjacent bins of a tone at
+about -6 dB relative to the peak (the main lobe is 4 bins wide), so a
+static vowel measures about -5.5 dB mean blur. That is the floor, not a
+defect: the freeze blur is measured relative to it. The mean blur is
+the headline number; the worst single harmonic is informative but
+noisy (one harmonic can straddle two bins evenly). Note the FFT sizes:
+4096 is 4x Ghost's 1024, so a Ghost bin frequency lands exactly on an
+analysis bin, and some harmonics read exactly -6.017 dB.
+
+**No Vox8 render exists yet.** The validation is on synthetic signals
+(--generate-test): a static vowel (the floor), a vibrato vowel
+(6 Hz, +/-0.5 semitone), and a simulated freeze. The simulated freeze
+is a sinusoidal-bank resynthesis of one Ghost (1024) frame -- hold the
+magnitude, advance the phase at each bin's frequency, the way a
+phase-vocoder freeze does. An overlap-add repeat of the frame would be
+wrong: it is periodic at the frame rate (187.5 Hz at 48 kHz / hop 256),
+not at the vowel's f0, so its spectrum is lines at the frame rate and
+the blur measurement is meaningless. That was the first implementation
+and it was caught by the validation (a +61 dB "blur" on one harmonic).
+
+**Measured results (2026-11-05, synthetic vowel "a", f0 110 Hz, 48 kHz, FFT 4096):**
+
+| Signal | Mean blur | Worst blur | Best blur | Harmonics |
+|---|---|---|---|---|
+| Static vowel | -5.496 dB | -4.476 dB | -6.016 dB | 32 |
+| Vibrato vowel (6 Hz, +/-0.5 st) | -1.392 dB | +1.302 dB | -4.915 dB | 29 |
+| Simulated freeze | -4.357 dB | -0.003 dB | -6.017 dB | 33 |
+
+The harness distinguishes all three: the vibrato smears the
+time-averaged spectrum (mean -1.39 dB), the frozen snapshot is
+sharper than the time-averaged vibrato but blurrier than the static
+vowel (-4.36 dB vs -5.50 dB, the frozen frame captured a
+vibrato-smeared spectrum). The comparison: frozen vs vibrato is
++2.965 dB mean (the frozen output is that much sharper than the
+time-averaged vibrato). A real measurement needs a FreeVox8 frozen
+vibrato render, with and without the WASPAA correction. Results live
+in `results/freeze-blur/`; the test signals are
+`data/test_tones/freeze_vibrato_vowel*.wav`.
+
 ## What is not implemented yet
 
 See `docs/MEASUREMENT_PLAN.md` for the full Therum section 7 + Vox8

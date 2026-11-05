@@ -97,6 +97,23 @@ resampler's anti-alias filter removes the out-of-band noise (effective
 in-band SNR ~+7 dB). Full method and the sample-rate note are in
 `docs/DSP_TEST_DESIGN.md`. Results live in `results/stoi/`.
 
+### Freeze-blur test (Vox8 freeze pilot, measured 2026-11-05, synthetic vowel "a", f0 110 Hz, 48 kHz, FFT 4096)
+
+| Signal | Mean blur | Worst blur | Best blur | Harmonics |
+|---|---|---|---|---|
+| Static vowel | -5.496 dB | -4.476 dB | -6.016 dB | 32 |
+| Vibrato vowel (6 Hz, +/-0.5 st) | -1.392 dB | +1.302 dB | -4.915 dB | 29 |
+| Simulated freeze | -4.357 dB | -0.003 dB | -6.017 dB | 33 |
+
+The static vowel is the Hann window floor (~-6 dB adjacent/peak). The
+vibrato smears the time-averaged spectrum; the frozen snapshot is
+sharper than the time-averaged vibrato but blurrier than the static
+vowel (it captured a vibrato-smeared frame). Frozen vs vibrato is
++2.965 dB mean. No FreeVox8 render exists yet -- these are synthetic
+validation signals, not a Vox8 measurement. Full method, the floor,
+and the OLA-repeat trap are in `docs/DSP_TEST_DESIGN.md`. Results live
+in `results/freeze-blur/`.
+
 ## Plugin benchmarks
 
 - pluginval strictness 10 result

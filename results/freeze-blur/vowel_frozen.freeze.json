@@ -1,0 +1,280 @@
+{
+  "schema_version": "arc-audiobench-freeze-blur-v1",
+  "tool": "ARC-AudioBench",
+  "analysis_type": "freeze_blur_test",
+  "input": "data/test_tones/freeze_vibrato_vowel_frozen.wav",
+  "f0_hz": 110.0,
+  "fft_size": 4096,
+  "sample_rate_hz": 48000,
+  "duration_s": 1.0,
+  "n_harmonics": 33,
+  "mean_blur_db": -4.357,
+  "worst_blur_db": -0.003,
+  "best_blur_db": -6.017,
+  "harmonics": [
+    {
+      "harmonic": 1,
+      "frequency_hz": 110.0,
+      "peak_bin": 8,
+      "peak_mag": 8.369186,
+      "adjacent_mag": 4.186384,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 2,
+      "frequency_hz": 220.0,
+      "peak_bin": 20,
+      "peak_mag": 6.040749,
+      "adjacent_mag": 3.021643,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 3,
+      "frequency_hz": 330.0,
+      "peak_bin": 28,
+      "peak_mag": 6.463789,
+      "adjacent_mag": 3.233238,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 4,
+      "frequency_hz": 440.0,
+      "peak_bin": 37,
+      "peak_mag": 3.660902,
+      "adjacent_mag": 3.659328,
+      "blur_db": -0.004
+    },
+    {
+      "harmonic": 5,
+      "frequency_hz": 550.0,
+      "peak_bin": 48,
+      "peak_mag": 15.376157,
+      "adjacent_mag": 7.691131,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 6,
+      "frequency_hz": 660.0,
+      "peak_bin": 56,
+      "peak_mag": 60.339952,
+      "adjacent_mag": 30.182762,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 7,
+      "frequency_hz": 770.0,
+      "peak_bin": 65,
+      "peak_mag": 39.818089,
+      "adjacent_mag": 39.800663,
+      "blur_db": -0.004
+    },
+    {
+      "harmonic": 8,
+      "frequency_hz": 880.0,
+      "peak_bin": 76,
+      "peak_mag": 19.144879,
+      "adjacent_mag": 9.576368,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 9,
+      "frequency_hz": 990.0,
+      "peak_bin": 84,
+      "peak_mag": 28.560249,
+      "adjacent_mag": 14.286138,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 10,
+      "frequency_hz": 1100.0,
+      "peak_bin": 95,
+      "peak_mag": 34.066067,
+      "adjacent_mag": 34.051177,
+      "blur_db": -0.004
+    },
+    {
+      "harmonic": 11,
+      "frequency_hz": 1210.0,
+      "peak_bin": 104,
+      "peak_mag": 15.014005,
+      "adjacent_mag": 7.510049,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 12,
+      "frequency_hz": 1320.0,
+      "peak_bin": 112,
+      "peak_mag": 4.710186,
+      "adjacent_mag": 2.356038,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 13,
+      "frequency_hz": 1430.0,
+      "peak_bin": 123,
+      "peak_mag": 1.108749,
+      "adjacent_mag": 1.108296,
+      "blur_db": -0.004
+    },
+    {
+      "harmonic": 14,
+      "frequency_hz": 1540.0,
+      "peak_bin": 132,
+      "peak_mag": 1.508511,
+      "adjacent_mag": 0.754567,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 15,
+      "frequency_hz": 1650.0,
+      "peak_bin": 140,
+      "peak_mag": 0.978612,
+      "adjacent_mag": 0.489512,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 16,
+      "frequency_hz": 1760.0,
+      "peak_bin": 151,
+      "peak_mag": 0.445697,
+      "adjacent_mag": 0.445517,
+      "blur_db": -0.004
+    },
+    {
+      "harmonic": 17,
+      "frequency_hz": 1870.0,
+      "peak_bin": 160,
+      "peak_mag": 0.921879,
+      "adjacent_mag": 0.461132,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 18,
+      "frequency_hz": 1980.0,
+      "peak_bin": 168,
+      "peak_mag": 0.937905,
+      "adjacent_mag": 0.469151,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 19,
+      "frequency_hz": 2090.0,
+      "peak_bin": 179,
+      "peak_mag": 0.744153,
+      "adjacent_mag": 0.743859,
+      "blur_db": -0.003
+    },
+    {
+      "harmonic": 20,
+      "frequency_hz": 2200.0,
+      "peak_bin": 188,
+      "peak_mag": 2.766926,
+      "adjacent_mag": 1.384037,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 21,
+      "frequency_hz": 2310.0,
+      "peak_bin": 196,
+      "peak_mag": 5.866842,
+      "adjacent_mag": 2.934701,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 22,
+      "frequency_hz": 2420.0,
+      "peak_bin": 208,
+      "peak_mag": 20.300099,
+      "adjacent_mag": 10.154351,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 23,
+      "frequency_hz": 2530.0,
+      "peak_bin": 216,
+      "peak_mag": 7.615629,
+      "adjacent_mag": 3.809355,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 24,
+      "frequency_hz": 2640.0,
+      "peak_bin": 224,
+      "peak_mag": 1.888673,
+      "adjacent_mag": 0.94474,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 25,
+      "frequency_hz": 2750.0,
+      "peak_bin": 236,
+      "peak_mag": 1.165269,
+      "adjacent_mag": 0.582877,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 26,
+      "frequency_hz": 2860.0,
+      "peak_bin": 244,
+      "peak_mag": 0.616194,
+      "adjacent_mag": 0.308224,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 27,
+      "frequency_hz": 2970.0,
+      "peak_bin": 252,
+      "peak_mag": 0.290795,
+      "adjacent_mag": 0.145461,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 28,
+      "frequency_hz": 3080.0,
+      "peak_bin": 264,
+      "peak_mag": 0.290681,
+      "adjacent_mag": 0.145401,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 29,
+      "frequency_hz": 3190.0,
+      "peak_bin": 272,
+      "peak_mag": 0.188633,
+      "adjacent_mag": 0.094356,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 30,
+      "frequency_hz": 3300.0,
+      "peak_bin": 283,
+      "peak_mag": 0.077045,
+      "adjacent_mag": 0.077014,
+      "blur_db": -0.003
+    },
+    {
+      "harmonic": 31,
+      "frequency_hz": 3410.0,
+      "peak_bin": 292,
+      "peak_mag": 0.126011,
+      "adjacent_mag": 0.063032,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 32,
+      "frequency_hz": 3520.0,
+      "peak_bin": 300,
+      "peak_mag": 0.087181,
+      "adjacent_mag": 0.043609,
+      "blur_db": -6.017
+    },
+    {
+      "harmonic": 34,
+      "frequency_hz": 3740.0,
+      "peak_bin": 320,
+      "peak_mag": 0.06923,
+      "adjacent_mag": 0.034629,
+      "blur_db": -6.017
+    }
+  ]
+}

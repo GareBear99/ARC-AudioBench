@@ -87,13 +87,28 @@ real Vox8 measurement needs a real corpus and a FreeVox8 render. The
 signals must be time-aligned and the same length. See
 `docs/DSP_TEST_DESIGN.md`.
 
-## 10. Make release evidence
+## 10. Freeze-blur test (Vox8 freeze pilot)
+
+```bash
+python3 scripts/freeze_blur_test.py --generate-test data/test_tones/freeze_vibrato_vowel.wav --f0 110
+python3 scripts/freeze_blur_test.py data/test_tones/freeze_vibrato_vowel_frozen.wav --f0 110 --out results/freeze-blur/vowel_frozen.freeze.json
+```
+
+Measures the spectral blur of a frozen (or sustained) vibrato vowel:
+peak-bin vs adjacent-bin energy per harmonic. No FreeVox8 render
+exists yet, so `--generate-test` synthesises the validation set (static
+vowel, vibrato vowel, simulated freeze); a real measurement needs a
+FreeVox8 frozen vibrato render, with and without the WASPAA correction.
+Use `--compare` for the corrected-vs-uncorrected comparison. See
+`docs/DSP_TEST_DESIGN.md`.
+
+## 11. Make release evidence
 
 ```bash
 python3 scripts/make_evidence_pack.py
 ```
 
-## 11. Validate the whole repo
+## 12. Validate the whole repo
 
 ```bash
 python3 scripts/validate_repo.py
@@ -108,6 +123,7 @@ python3 scripts/arc_audiobench.py alias data/test_tones/sawtooth_bandlimited_997
 python3 scripts/arc_audiobench.py nmr data/test_tones/sawtooth_bandlimited_997hz.wav --f0 997 --out results/nmr/sawtooth_bandlimited_997hz.nmr.json
 python3 scripts/arc_audiobench.py cramping data/test_tones/sweep_peaking_8000hz.wav --type peaking --fc 8000 --q 1.0 --gain-db 12 --out results/cramping/sweep_peaking_8000hz.cramping.json
 python3 scripts/arc_audiobench.py stoi data/test_tones/stoi_speech_like.wav data/test_tones/stoi_speech_like_noisy0db.wav --out results/stoi/speech_like_vs_noisy0db.stoi.json
+python3 scripts/arc_audiobench.py freeze-blur data/test_tones/freeze_vibrato_vowel_frozen.wav --f0 110 --out results/freeze-blur/vowel_frozen.freeze.json
 python3 scripts/arc_audiobench.py report results --out reports/index.html
 python3 scripts/arc_audiobench.py evidence
 ```

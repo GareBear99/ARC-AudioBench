@@ -20,6 +20,7 @@ def main():
     nm=sub.add_parser('nmr'); nm.add_argument('wav'); nm.add_argument('--f0', type=float, required=True); nm.add_argument('--out'); nm.add_argument('--label'); nm.add_argument('--ref-spl', type=float, default=96.0); nm.add_argument('--nmr-db', type=float, default=0.0)
     cr=sub.add_parser('cramping'); cr.add_argument('wav'); cr.add_argument('--type', dest='filter_type', default='peaking', choices=['peaking','lowpass','highpass']); cr.add_argument('--fc', type=float, default=8000.0); cr.add_argument('--q', type=float, default=1.0); cr.add_argument('--gain-db', type=float, default=12.0); cr.add_argument('--out'); cr.add_argument('--max-error-db', type=float, default=1.0); cr.add_argument('--reference'); cr.add_argument('--input-amplitude', type=float, default=0.5); cr.add_argument('--f-start', type=float, default=20.0); cr.add_argument('--f-end', type=float, default=20000.0)
     st=sub.add_parser('stoi'); st.add_argument('clean'); st.add_argument('degraded'); st.add_argument('--out')
+    fb=sub.add_parser('freeze-blur'); fb.add_argument('wav'); fb.add_argument('--f0', type=float, default=110.0); fb.add_argument('--fft-size', type=int, default=4096); fb.add_argument('--compare'); fb.add_argument('--out')
     sub.add_parser('evidence')
     sub.add_parser('validate-repo')
     args=ap.parse_args()
@@ -55,6 +56,12 @@ def main():
         return run(*cmd)
     if args.cmd=='stoi':
         cmd=['stoi_test.py', args.clean, args.degraded]
+        if args.out: cmd += ['--out', args.out]
+        return run(*cmd)
+    if args.cmd=='freeze-blur':
+        cmd=['freeze_blur_test.py', args.wav, '--f0', str(args.f0),
+             '--fft-size', str(args.fft_size)]
+        if args.compare: cmd += ['--compare', args.compare]
         if args.out: cmd += ['--out', args.out]
         return run(*cmd)
     if args.cmd=='evidence': return run('make_evidence_pack.py')
