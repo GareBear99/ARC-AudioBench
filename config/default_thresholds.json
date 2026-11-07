@@ -1,9 +1,1 @@
-{
-  "schema_version": "arc-audiobench-thresholds-v1",
-  "max_peak": 1.0,
-  "max_abs_dc_offset": 0.01,
-  "max_clipping_samples": 0,
-  "min_duration_seconds": 0.001,
-  "warn_rms_below": 0.000001,
-  "warn_crest_above": 1000.0
-}
+{"max_abs_dc_offset":0.01,"max_clipping_samples":0,"max_peak":1.0,"measurements":{"alias":{"alias_to_signal_ratio_db":-40.0,"note":"CLI defaults of scripts/alias_test.py. Therum step 2 (mipped wavetable, 997 Hz): worst alias -45.80 dBFS at 22078 Hz, ASR -33.23 dB; naive: -32.24 dBFS, ASR -16.01 dB. Both fail the -60 dBFS bar -- the bar is the target, not the current state.","worst_alias_dbfs":-60.0},"cramping":{"freeeq8_baseline_db":-3.383,"max_error_db":1.0,"note":"CLI default of scripts/cramping_test.py. The FreeEQ8 baseline (-3.383 dB at the geometric-mean frequency) is the error to beat for a filter that does not cramp; the RBJ biquad loses -2.026 dB (peaking, fc 8000, +12 dB, Q 1.0) at the same point."},"freeze_blur":{"max_blur_db":null,"note":"No fixed bar yet: scripts/freeze_blur_test.py takes --max-blur-db when one is wanted (pass is null without one). Reference means on the committed vowel set: static -5.496 dB, vibrato -1.392 dB, simulated freeze -4.357 dB."},"nmr":{"nmr_threshold_db":0.0,"note":"CLI default of scripts/nmr_test.py (Therum paper section 7 headline test): every alias below the masking curve. Therum step 2: the 22 kHz alias is well masked (NMR -69.80 dB); the failure is the low-frequency folded harmonics -- worst NMR +23.31 dB (mipped) / +42.04 dB (naive)."},"stoi":{"ghost_freevox8":0.7939,"ghost_vox8":0.7796,"note":"Reference values, not a default threshold: scripts/stoi_test.py takes --min-stoi when a bar is wanted (pass is null without one). TAL-Vocoder (free, 11 bands) is the competitor bar; the Ghost resynthesis outputs beat it (FreeVox8 0.7939, Vox8 0.7796). The synthetic vocoded tone in data/test_tones scores 0.4807 -- it is a degraded synthetic, not a Ghost output, and is pinned by value in the test suite.","tal_bar":0.7434}},"min_duration_seconds":0.001,"schema_version":"arc-audiobench-thresholds-v1","warn_crest_above":1000.0,"warn_rms_below":1e-6}

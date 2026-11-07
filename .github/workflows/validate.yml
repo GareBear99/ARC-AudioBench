@@ -28,6 +28,30 @@ jobs:
             echo "ERROR: naive sawtooth passed the alias test -- the test is not detecting aliasing"
             exit 1
           fi
+      - name: NMR test (band-limited sawtooth must pass)
+        run: python3 scripts/nmr_test.py data/test_tones/sawtooth_bandlimited_997hz.wav --f0 997 --out results/nmr/sawtooth_bandlimited_997hz.nmr.json
+      - name: NMR test (naive sawtooth must fail -- negative control)
+        run: |
+          if python3 scripts/nmr_test.py data/test_tones/sawtooth_naive_997hz.wav --f0 997 --out results/nmr/sawtooth_naive_997hz.nmr.json; then
+            echo "ERROR: naive sawtooth passed the NMR test -- the test is not detecting masking violations"
+            exit 1
+          fi
+      - name: Cramping test (highpass must pass, peaking must fail -- negative control)
+        run: |
+          python3 scripts/cramping_test.py data/test_tones/sweep_highpass_8000hz.wav --type highpass --fc 8000 --q 0.707 --out results/cramping/sweep_highpass_8000hz.cramping.json
+          if python3 scripts/cramping_test.py data/test_tones/sweep_peaking_8000hz.wav --type peaking --fc 8000 --q 1.0 --gain-db 12.0 --out results/cramping/sweep_peaking_8000hz.cramping.json; then
+            echo "ERROR: peaking sweep passed the cramping test -- the test is not detecting cramping"
+            exit 1
+          fi
+      - name: STOI test (synthetic corpus reproduces committed scores)
+        run: |
+          python3 scripts/stoi_test.py data/test_tones/stoi_speech_like.wav data/test_tones/stoi_speech_like.wav --out results/stoi/speech_like_vs_clean.stoi.json
+          python3 scripts/stoi_test.py data/test_tones/stoi_speech_like.wav data/test_tones/stoi_speech_like_vocoded.wav --out results/stoi/speech_like_vs_vocoded.stoi.json
+      - name: Freeze-blur test (frozen vowel reproduces committed blur)
+        run: |
+          python3 scripts/freeze_blur_test.py data/test_tones/freeze_vibrato_vowel_frozen.wav --f0 110 --compare data/test_tones/freeze_vibrato_vowel.wav --out results/freeze-blur/frozen_vs_vibrato.freeze.json
+      - name: Test suite (49 tests, 0 failures required)
+        run: python3 -m unittest discover -s tests -v
       - name: Report
         run: python3 scripts/report_results.py results --out reports/index.html --markdown reports/summary.md
       - name: Validate repo

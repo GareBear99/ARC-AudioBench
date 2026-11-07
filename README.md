@@ -52,6 +52,28 @@ This repo is intentionally **local-first**. No cloud service is required to gene
 - Voxel Audio visual/export benchmark plan
 - ARC governance and receipt-style release evidence
 - Citation metadata and research SEO documentation
+- Measurement tests: alias, NMR masking, filter cramping, STOI intelligibility, freeze-blur
+- Test suite (`tests/`, 49 tests): every measurement pinned to committed results, negative controls included
+
+## Testing grounds
+
+The measurement scripts are the product, and `tests/` is what proves they work. Run the suite with:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+It re-runs every measurement on the committed test tones and on the real Therum renders, and asserts the headline numbers match the committed results in `results/`. Negative controls are included on purpose: the naive sawtooth must FAIL the alias and NMR tests, and the RBJ peaking sweep must FAIL the cramping test -- if any of those ever pass, the test is not detecting what it claims to detect.
+
+| Measurement | Script | Headline bar | Committed reference |
+|---|---|---|---|
+| Alias | `scripts/alias_test.py` | worst alias -60 dBFS, ASR -40 dB | band-limited passes, naive fails (-38.25 dBFS at 22078 Hz) |
+| NMR (masking) | `scripts/nmr_test.py` | worst NMR 0 dB (every alias below the masking curve) | band-limited passes, naive fails (+36.05 dB) |
+| Cramping | `scripts/cramping_test.py` | max error 1.0 dB at the geometric-mean frequency | peaking -2.026 dB (fails), highpass +0.271 dB (passes); FreeEQ8 baseline -3.383 dB |
+| STOI | `scripts/stoi_test.py` | `--min-stoi` (TAL-Vocoder bar 0.7434) | synthetic vocoded tone 0.4807; Ghost outputs beat the bar (FreeVox8 0.7939, Vox8 0.7796) |
+| Freeze-blur | `scripts/freeze_blur_test.py` | `--max-blur-db` (omit to report only) | static -5.496 dB, vibrato -1.392 dB, simulated freeze -4.357 dB |
+
+Thresholds and reference bars live in `config/default_thresholds.json` (section `measurements`). STOI and freeze-blur take their thresholds as flags (`--min-stoi`, `--max-blur-db`) and report the value only when no threshold is given, so a synthetic degraded tone is never failed against a bar meant for a real vocoder output. The Therum integration tests (`tests/test_therum_integration.py`) run the alias and NMR tests on the real Therum wavetable renders and are skipped when the Therum repo is absent. CI runs the measurements and the full suite on every push.
 
 ## Start here
 
