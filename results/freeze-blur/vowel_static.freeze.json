@@ -11,6 +11,8 @@
   "mean_blur_db": -5.496,
   "worst_blur_db": -4.476,
   "best_blur_db": -6.016,
+  "max_blur_threshold_db": null,
+  "pass": null,
   "harmonics": [
     {
       "harmonic": 1,

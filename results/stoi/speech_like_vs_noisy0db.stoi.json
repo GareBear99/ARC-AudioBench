@@ -43,5 +43,7 @@
     2400.0,
     3023.8,
     3809.8
-  ]
+  ],
+  "min_stoi_threshold": null,
+  "pass": null
 }

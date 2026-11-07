@@ -446,7 +446,15 @@ def vocoder_like(x, fs, n_bands=8):
 
 # ------------------------------------------------------------------- analysis
 
-def run_stoi(clean_path, degraded_path):
+def run_stoi(clean_path, degraded_path, min_stoi=None):
+    """Run STOI on a clean/degraded pair.
+
+    ``min_stoi`` is an optional pass threshold (e.g. the TAL-Vocoder
+    bar, 0.7434): when given, the result carries ``pass`` (score >=
+    threshold); when omitted the result reports the value only and
+    ``pass`` is None, so a synthetic degraded tone is never failed
+    against a bar meant for a real vocoder output.
+    """
     clean, fs_c = read_wav(clean_path)
     degraded, fs_d = read_wav(degraded_path)
     if fs_c != fs_d:
@@ -467,6 +475,8 @@ def run_stoi(clean_path, degraded_path):
         "segments": detail["segments"],
         "band_means": detail["band_means"],
         "band_centres_hz": detail["band_centres_hz"],
+        "min_stoi_threshold": min_stoi,
+        "pass": (score >= min_stoi) if min_stoi is not None else None,
     }
     return result
 
@@ -483,6 +493,10 @@ def main(argv=None):
                         help="degraded WAV (same length, same sample rate)")
     parser.add_argument("--out",
                         help="write the JSON result to this path (default: stdout)")
+    parser.add_argument("--min-stoi", type=float, default=None,
+                        help="pass threshold on the STOI score (e.g. 0.7434, "
+                             "the TAL-Vocoder bar the Ghost outputs are "
+                             "judged against). Omit to report the value only.")
     parser.add_argument("--generate-test", metavar="WAV",
                         help="generate a synthetic speech-like test signal "
                              "at 10 kHz and write it to WAV, then exit")
@@ -504,7 +518,7 @@ def main(argv=None):
     if not args.clean or not args.degraded:
         parser.error("a clean WAV and a degraded WAV are required "
                      "(or --generate-test)")
-    result = run_stoi(args.clean, args.degraded)
+    result = run_stoi(args.clean, args.degraded, min_stoi=args.min_stoi)
     text = json.dumps(result, indent=2)
     if args.out:
         out_path = Path(args.out)
@@ -513,6 +527,8 @@ def main(argv=None):
         print(str(out_path))
     else:
         print(text)
+    if result["pass"] is False:
+        return 1
     return 0
 
 

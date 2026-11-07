@@ -173,13 +173,19 @@ def _average_magnitude_spectrum(x, fft_size):
 # ------------------------------------------------------------- blur measure
 
 def analyze_freeze_blur(wav_path, f0, fft_size=DEFAULT_FFT_SIZE,
-                        mag_threshold_db=-60.0):
+                        mag_threshold_db=-60.0, max_blur_db=None):
     """Measure the freeze blur of a sustained-vowel WAV.
 
     Returns a dict with the per-harmonic blur and the summary numbers.
     Harmonics whose peak magnitude is more than mag_threshold_db below
     the strongest harmonic are dropped: they sit at the quantisation /
-    numerical floor and their blur is meaningless."""
+    numerical floor and their blur is meaningless.
+
+    ``max_blur_db`` is an optional pass threshold on the mean blur
+    (more negative = sharper): when given, the result carries ``pass``
+    (mean blur <= threshold); when omitted the result reports the
+    value only and ``pass`` is None.
+    """
     x, sr = read_wav(wav_path)
     if fft_size > len(x):
         raise ValueError("signal (%d samples) shorter than the FFT size %d"
@@ -246,6 +252,8 @@ def analyze_freeze_blur(wav_path, f0, fft_size=DEFAULT_FFT_SIZE,
         "mean_blur_db": round(mean_blur, 3),
         "worst_blur_db": round(max(blurs), 3),
         "best_blur_db": round(min(blurs), 3),
+        "max_blur_threshold_db": max_blur_db,
+        "pass": (mean_blur <= max_blur_db) if max_blur_db is not None else None,
         "harmonics": harmonics,
     }
     return result
@@ -357,6 +365,10 @@ def main(argv=None):
     parser.add_argument("--compare",
                         help="second WAV (e.g. corrected freeze) to compare "
                              "against the first; reports the blur difference")
+    parser.add_argument("--max-blur-db", type=float, default=None,
+                        help="pass threshold on the mean blur in dB (more "
+                             "negative = sharper). Omit to report the value "
+                             "only.")
     parser.add_argument("--generate-test", metavar="WAV",
                         help="generate the validation set (static vowel, "
                              "vibrato vowel, simulated freeze) and write the "
@@ -395,7 +407,8 @@ def main(argv=None):
 
     if not args.wav:
         parser.error("a vowel WAV is required (or --generate-test)")
-    result = analyze_freeze_blur(args.wav, args.f0, args.fft_size)
+    result = analyze_freeze_blur(args.wav, args.f0, args.fft_size,
+                                 max_blur_db=args.max_blur_db)
     if args.compare:
         other = analyze_freeze_blur(args.compare, args.f0, args.fft_size)
         # Correction gain: how much lower (more negative) the blur is in
@@ -418,6 +431,8 @@ def main(argv=None):
         print(str(out_path))
     else:
         print(text)
+    if result["pass"] is False:
+        return 1
     return 0
 
 
